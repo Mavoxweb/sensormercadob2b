@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowRight, Sparkles, ExternalLink } from 'lucide-react';
 import { Button } from '../ui/Button';
+import { Badge } from '../ui/Badge';
 
 export const FinalCTA: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -14,49 +15,65 @@ export const FinalCTA: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
-      {/* Subtle Green Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] hero-glow pointer-events-none opacity-80" />
+    <section className="py-20 lg:py-32 bg-[#090D0F] border-t border-[#253039]/60 relative overflow-hidden">
+      {/* Background Radial Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#20D47715_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#20D477]/10 text-[#20D477] border border-[#20D477]/30 text-xs font-bold uppercase tracking-wider">
-          <Sparkles className="w-4 h-4" />
-          OPERAÇÃO ENTERPRISE READY
-        </div>
+        {/* Eyebrow */}
+        <Badge variant="green" className="py-1.5 px-4 text-xs tracking-widest uppercase">
+          ÚLTIMO CONVITE
+        </Badge>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#F4F7F5] tracking-tight leading-[1.12] max-w-4xl mx-auto">
-          Sua rede já tem ofertas, lojas e clientes.{' '}
-          <span className="block text-[#20D477] mt-2">
-            Falta transformar isso em uma operação de campanhas escalável.
+        {/* Headline */}
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#F4F7F5] tracking-tight leading-tight">
+          Sua próxima campanha pode começar em minutos —{' '}
+          <span className="text-[#20D477] block mt-1">
+            e manter o padrão em todas as lojas.
           </span>
         </h2>
 
-        <p className="text-base sm:text-lg text-[#A7B0AB] max-w-2xl mx-auto leading-relaxed">
-          Veja como o Sensor Mercado pode funcionar com a identidade, estrutura e unidades da sua rede.
+        {/* Description */}
+        <p className="text-base sm:text-xl text-[#A7B0AB] font-normal leading-relaxed max-w-2xl mx-auto">
+          Teste o protótipo ou agende uma demonstração para ver a plataforma com a identidade da sua rede.
         </p>
 
+        {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a
-            href="https://www.sensormercado.com.br/demo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-black bg-[#20D477] text-[#090D0F] hover:bg-[#18BC68] transition-all shadow-[0_0_25px_rgba(32,212,119,0.4)] active:scale-98 min-h-[52px]"
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => scrollTo('#prototipo')}
+            className="w-full sm:w-auto min-h-[52px] font-black text-sm"
+            leftIcon={<Sparkles className="w-5 h-5" />}
           >
-            <Sparkles className="w-5 h-5" />
-            <span>ACESSAR DEMO LIVE ON-LINE</span>
-            <ExternalLink className="w-4 h-4" />
-          </a>
+            Testar o protótipo
+          </Button>
 
           <Button
             variant="secondary"
             size="lg"
-            className="w-full sm:w-auto min-h-[52px]"
             onClick={() => scrollTo('#demonstracao')}
+            className="w-full sm:w-auto min-h-[52px]"
             rightIcon={<ArrowRight className="w-5 h-5 text-[#20D477]" />}
           >
-            Agendar demonstração comercial
+            Agendar demonstração
           </Button>
+
+          <a
+            href="https://www.sensormercado.com.br/demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold bg-[#171E24] text-[#20D477] border border-[#20D477]/40 hover:bg-[#20D477] hover:text-[#090D0F] transition-all min-h-[52px]"
+          >
+            <span>Demo Live Online</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
+
+        <p className="text-xs text-[#A7B0AB] pt-4 font-semibold">
+          Sensor Mercado — A plataforma de encartes da sua rede de supermercados.
+        </p>
       </div>
     </section>
   );

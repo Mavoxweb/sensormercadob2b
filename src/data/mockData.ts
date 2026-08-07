@@ -249,46 +249,32 @@ export const MOCK_STORES = [
 
 export const WORKFLOW_STEPS: WorkflowStep[] = [
   {
-    number: '01',
-    title: 'INSIRA OS PRODUTOS',
-    shortDesc: 'Importação direta por planilha, ERP ou lista rápida de itens.',
-    fullDesc: 'Suba sua lista comercial de produtos ou integre com o ERP da sua rede. O sistema aceita códigos EAN, nomes comerciais e tabelas de preços.',
+    number: '1',
+    title: 'Personalizamos',
+    shortDesc: 'Nome, logo, cores e identidade visual da rede dentro da plataforma.',
+    fullDesc: 'Customizamos 100% da plataforma com a marca oficial, logos, cores corporativas e fontes proprietárias da sua rede de supermercados.',
     tag: 'ETAPA 01'
   },
   {
-    number: '02',
-    title: 'O SISTEMA ORGANIZA O MATERIAL',
-    shortDesc: 'Reconhecimento inteligente, categorias e tratamento visual.',
-    fullDesc: 'Nossa inteligência comercial categoriza os itens automaticamente, remove o fundo das imagens dos produtos e aplica o layout apropriado.',
+    number: '2',
+    title: 'A matriz organiza',
+    shortDesc: 'Define modelos, padrões e o que pode ser adaptado pelas unidades.',
+    fullDesc: 'A equipe central de marketing disponibiliza os modelos oficiais travados, garantindo governança total e zero risco de erro visual.',
     tag: 'ETAPA 02'
   },
   {
-    number: '03',
-    title: 'A IDENTIDADE DA REDE É APLICADA',
-    shortDesc: 'Cores institucionais, tipografia, logos e molduras travadas pela matriz.',
-    fullDesc: 'Nenhuma loja quebra o manual de marca. As cores, logos da rede, formatos de selo e fontes são carregados de forma automatizada e protegida.',
+    number: '3',
+    title: 'As lojas adaptam',
+    shortDesc: 'Cada unidade ajusta produtos, preços e ofertas conforme a realidade local.',
+    fullDesc: 'Os gerentes de loja recebem autonomia regrada para alterar ofertas regionais, vigências e preços sem mexer no design da marca.',
     tag: 'ETAPA 03'
   },
   {
-    number: '04',
-    title: 'A LOJA ADAPTA PREÇOS E OFERTAS',
-    shortDesc: 'Autonomia regrada para gerentes ajustarem estoques e preços locais.',
-    fullDesc: 'Cada gerente acessa o painel de sua unidade e pode ajustar preços regionais, incluir promoções do dia e alterar vigências sem mexer no design.',
+    number: '4',
+    title: 'A rede publica',
+    shortDesc: 'Os encartes ficam prontos para redes sociais e impressão, com publicação pela plataforma.',
+    fullDesc: 'Com um clique, os materiais são exportados em múltiplos formatos (A4 impresso, Feed 1:1, Stories 9:16 e WhatsApp HD) prontos para ação.',
     tag: 'ETAPA 04'
-  },
-  {
-    number: '05',
-    title: 'ESCOLHA O FORMATO',
-    shortDesc: 'Múltiplos tamanhos gerados automaticamente em um só clique.',
-    fullDesc: 'Gere instantaneamente encartes A4 para impressão gráfica, posts 1:1 para feed do Instagram, stories 9:16, lâminas para WhatsApp e displays de TV.',
-    tag: 'ETAPA 05'
-  },
-  {
-    number: '06',
-    title: 'PUBLIQUE',
-    shortDesc: 'Envio simultâneo para impressão gráfica e distribuição digital.',
-    fullDesc: 'Com um clique, os arquivos de alta resolução são enviados para gráfica e os materiais digitais ficam disponíveis para download e envio automático.',
-    tag: 'ETAPA 06'
   }
 ];
 
@@ -345,27 +331,27 @@ export const FORMAT_OPTIONS: FormatTypeOption[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "A Sensor Mercado é apenas um site de encartes?",
-    answer: "Não. É uma plataforma personalizada para a operação da sua rede, estruturada para conectar matriz e unidades. Trata-se de uma infraestrutura operacional completa para governança de marca, criação automatizada e distribuição de campanhas em massa."
+    question: "A Sensor Mercado é um site de encartes?",
+    answer: "Não. É uma plataforma personalizada para a sua rede, distribuída entre matriz e unidades."
   },
   {
     question: "Cada unidade poderá criar seus próprios materiais?",
-    answer: "Sim. A matriz define padrões, molduras, fontes e permissões travadas, enquanto as lojas adaptam produtos, preços e campanhas locais com total velocidade e zero risco de quebrar a identidade visual."
+    answer: "Sim. A matriz define padrões e permissões; as lojas adaptam produtos, preços e campanhas locais."
   },
   {
     question: "Serve para redes sociais e impressão?",
-    answer: "Sim. A plataforma gera automaticamente materiais em alta resolução para impressão gráfica (A4, tabloides, cartazes de gôndola) e múltiplos formatos digitais (Instagram Feed 1:1, Stories 9:16, WhatsApp HD e TV interna)."
+    answer: "Sim. A plataforma cria, publica e gera materiais prontos para impressão."
   },
   {
     question: "Existe cobrança mensal?",
-    answer: "A proposta comercial é baseada em aquisição da plataforma com acesso vitalício para a sua rede. Não vendemos como SaaS de prateleira ou mensalidade por usuário. Condições, suporte, manutenção e escopo de implementação são formalizados comercialmente para a sua operação."
+    answer: "A proposta é uma aquisição única com acesso vitalício. Condições e escopo são formalizados em contrato."
   },
   {
     question: "A plataforma terá a identidade da minha rede?",
-    answer: "Sim. Nome da sua rede, logotipo, paleta oficial de cores, fontes corporativas, selos proprietários e regras de layout são 100% customizados durante o processo de implantação."
+    answer: "Sim. Nome, logo, cores e elementos visuais são personalizados."
   },
   {
     question: "Vocês oferecem suporte e manutenção?",
-    answer: "Sim, de acordo com o escopo definido na implantação e na proposta comercial. Garantimos sustentabilidade tecnológica, atualizações de segurança e acompanhamento para o time de marketing da matriz."
+    answer: "Sim, conforme o escopo apresentado na demonstração e no contrato."
   }
 ];

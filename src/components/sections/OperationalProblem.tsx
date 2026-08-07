@@ -6,15 +6,16 @@ import {
   AlertTriangle, 
   MessageSquare, 
   Clock, 
-  FileCheck, 
   Building2, 
   Store, 
   Zap, 
   XCircle, 
   CheckCircle2, 
-  ArrowRight,
   UserX,
-  ShieldCheck
+  ShieldCheck,
+  ZapOff,
+  Palette,
+  FileSpreadsheet
 } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 
@@ -35,17 +36,65 @@ export const OperationalProblem: React.FC = () => {
     return () => clearInterval(interval);
   }, [notifications.length]);
 
+  const painPoints = [
+    {
+      title: "Ofertas demorando para ir ao ar",
+      description: "A oportunidade passa enquanto a arte ainda está sendo produzida ou aprovada.",
+      icon: Clock
+    },
+    {
+      title: "Cada unidade comunicando de um jeito",
+      description: "Cores, formatos e mensagens diferentes enfraquecem a identidade da rede.",
+      icon: Palette
+    },
+    {
+      title: "Dependência de designer ou agência",
+      description: "Uma troca simples de produto ou preço vira fila, retrabalho e custo.",
+      icon: UserX
+    },
+    {
+      title: "Pouca velocidade para campanhas locais",
+      description: "As lojas conhecem sua região, mas não têm autonomia segura para agir rápido.",
+      icon: ZapOff
+    }
+  ];
+
   return (
-    <section id="produto" className="py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section id="produto" className="py-16 sm:py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="O PROBLEMA"
-          title="Sua rede cresceu. A criação de campanhas precisa acompanhar."
+          title="Sua rede cresceu. A criação de encartes precisa acompanhar."
           description="Quando cada campanha depende de pedidos, aprovações e ajustes manuais, as ofertas demoram, o padrão se perde e as unidades ficam presas a terceiros."
         />
 
-        {/* Comparison Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+        {/* 4 Pain Points Cards Grid from Copy */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 mb-16">
+          {painPoints.map((point, index) => {
+            const Icon = point.icon;
+            return (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-[#12181D] border border-[#253039] hover:border-[#EF5B5B]/50 transition-all flex items-start gap-4 group shadow-lg"
+              >
+                <div className="p-3 rounded-xl bg-[#EF5B5B]/10 text-[#EF5B5B] border border-[#EF5B5B]/30 shrink-0 group-hover:scale-110 transition-transform">
+                  <Icon className="w-6 h-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <h3 className="text-lg font-bold text-[#F4F7F5] group-hover:text-[#EF5B5B] transition-colors">
+                    {point.title}
+                  </h3>
+                  <p className="text-sm text-[#A7B0AB] leading-relaxed">
+                    {point.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Comparison Visual Grid Container */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* LEFT: HOJE (Gargalo Tradicional) */}
           <div className="rounded-2xl bg-[#12181D] border border-[#EF5B5B]/30 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group">
             <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#EF5B5B]/10 text-[#EF5B5B] text-xs font-bold rounded-bl-xl border-l border-b border-[#EF5B5B]/30 flex items-center gap-1.5">
@@ -59,17 +108,17 @@ export const OperationalProblem: React.FC = () => {
                   <AlertTriangle className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F4F7F5]">Gargalo de Comunicação</h3>
-                  <p className="text-xs text-[#A7B0AB]">WhatsApp, e-mails soltos e dependência de designers</p>
+                  <h3 className="text-xl font-bold text-[#F4F7F5]">Gargalo Operacional</h3>
+                  <p className="text-xs text-[#A7B0AB]">WhatsApp, e-mails soltos e dependência de terceiros</p>
                 </div>
               </div>
 
               {/* Animated Bottleneck Diagram */}
               <div className="space-y-2.5">
                 {[
-                  { role: 'Gerente da Loja', action: 'Pede alteração de preço', icon: MessageSquare },
-                  { role: 'WhatsApp / E-mail', action: 'Mensagem perdida no grupo', icon: Clock },
-                  { role: 'Marketing Central', action: 'Fila de solicitações acumuladas', icon: AlertTriangle },
+                  { role: 'Gerente da Loja', action: 'Pede alteração de preço via WhatsApp', icon: MessageSquare },
+                  { role: 'E-mail / Grupo', action: 'Solicitação perdida ou esquecida', icon: Clock },
+                  { role: 'Marketing Central', action: 'Fila de aprovações acumuladas', icon: AlertTriangle },
                   { role: 'Designer Terceirizado', action: 'Demora 48h para refazer arte', icon: UserX },
                   { role: 'Aprovação Manual', action: 'Erro de digitação e retrabalho', icon: XCircle },
                 ].map((item, idx) => {
@@ -112,12 +161,12 @@ export const OperationalProblem: React.FC = () => {
             </div>
 
             <div className="mt-8 pt-4 border-t border-[#253039] text-xs text-[#EF5B5B] font-semibold flex items-center justify-between">
-              <span>Resultado: Campanhas atrasadas e marca inconsistente</span>
+              <span>Resultado: Atrasos, erros e perda de identidade da rede</span>
               <XCircle className="w-4 h-4" />
             </div>
           </div>
 
-          {/* RIGHT: COM SENSOR MERCADO (Infraestrutura Enterprise) */}
+          {/* RIGHT: COM SENSOR MERCADO */}
           <div className="rounded-2xl bg-[#12181D] border border-[#20D477]/40 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden card-glow group">
             <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#20D477]/10 text-[#20D477] text-xs font-bold rounded-bl-xl border-l border-b border-[#20D477]/30 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4" />

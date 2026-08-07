@@ -21,12 +21,10 @@ import { Button } from '../ui/Button';
 
 export const DemoForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    role: '',
+    nameAndRole: '',
     supermarketName: '',
-    unitCount: '5-10',
-    whatsapp: '',
-    email: '',
+    unitCount: '5 a 10 unidades',
+    contactInfo: '',
     preferredTime: 'Manhã (09h - 12h)',
   });
 
@@ -43,7 +41,7 @@ export const DemoForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.supermarketName || !formData.whatsapp || !formData.email) {
+    if (!formData.nameAndRole || !formData.supermarketName || !formData.contactInfo) {
       setErrorMessage('Por favor, preencha os campos obrigatórios (*).');
       setStatus('error');
       return;
@@ -51,18 +49,6 @@ export const DemoForm: React.FC = () => {
 
     setStatus('loading');
 
-    /* 
-      ARQUITETURA DE INTEGRAÇÃO FUTURA COM CRM / WEBHOOK:
-      Para conectar a um webhook N8N, HubSpot, RD Station ou Salesforce:
-      
-      const response = await fetch('/api/leads/demo', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-    */
-
-    // Simulated API response delay
     setTimeout(() => {
       setStatus('success');
       setErrorMessage('');
@@ -72,12 +58,12 @@ export const DemoForm: React.FC = () => {
   const displayName = formData.supermarketName.trim() || 'Sua Rede de Supermercados';
 
   return (
-    <section id="demonstracao" className="py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section id="demonstracao" className="py-16 sm:py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="DEMONSTRAÇÃO PERSONALIZADA"
-          title="Agora veja o Sensor Mercado com a sua marca."
-          description="Mostramos como a plataforma pode ser estruturada para a identidade, matriz e unidades da sua rede."
+          title="Veja como a Sensor Mercado funcionaria dentro da sua rede."
+          description="Em uma conversa objetiva, mostramos como a plataforma ficaria com a identidade da sua marca, como seria distribuída entre matriz e unidades e qual é o investimento para colocar o projeto em operação."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-6xl mx-auto mt-12">
@@ -85,10 +71,10 @@ export const DemoForm: React.FC = () => {
           <div className="lg:col-span-7 rounded-2xl bg-[#12181D] border border-[#253039] p-6 sm:p-8 lg:p-10 shadow-xl">
             <h3 className="text-xl font-extrabold text-[#F4F7F5] mb-2 flex items-center gap-2">
               <Building2 className="w-5 h-5 text-[#20D477]" />
-              Solicite uma Apresentação Executiva
+              Agendar uma demonstração
             </h3>
             <p className="text-xs text-[#A7B0AB] mb-6">
-              Preencha os dados da sua operação para que nosso time prepare uma prévia da plataforma com o nome e estrutura da sua empresa.
+              Preencha os dados abaixo para organizarmos uma demonstração focada na realidade da sua rede.
             </p>
 
             {status === 'success' ? (
@@ -104,7 +90,7 @@ export const DemoForm: React.FC = () => {
                   Solicitação Recebida com Sucesso!
                 </h4>
                 <p className="text-xs text-[#F4F7F5] leading-relaxed max-w-md mx-auto">
-                  Obrigado, <strong className="text-[#20D477]">{formData.name}</strong>. Nossa equipe comercial entrará em contato via WhatsApp/E-mail para apresentar o protótipo personalizado da <strong className="text-[#20D477]">{displayName}</strong>.
+                  Obrigado. Nossa equipe entrará em contato para agendar a demonstração personalizada da <strong className="text-[#20D477]">{displayName}</strong>.
                 </p>
                 <Button
                   variant="outline"
@@ -124,39 +110,21 @@ export const DemoForm: React.FC = () => {
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* Nome */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
-                      <User className="w-3.5 h-3.5 text-[#20D477]" />
-                      Seu Nome *
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Ex: Carlos Silva"
-                      className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
-                      required
-                    />
-                  </div>
-
-                  {/* Cargo */}
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
-                      <Briefcase className="w-3.5 h-3.5 text-[#20D477]" />
-                      Cargo na Empresa
-                    </label>
-                    <input
-                      type="text"
-                      name="role"
-                      value={formData.role}
-                      onChange={handleChange}
-                      placeholder="Ex: Diretor de Operações / Gestor"
-                      className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
-                    />
-                  </div>
+                {/* Nome e cargo */}
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
+                    <User className="w-3.5 h-3.5 text-[#20D477]" />
+                    Nome e cargo *
+                  </label>
+                  <input
+                    type="text"
+                    name="nameAndRole"
+                    value={formData.nameAndRole}
+                    onChange={handleChange}
+                    placeholder="Ex: Carlos Silva — Diretor de Operações"
+                    className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
+                    required
+                  />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -164,7 +132,7 @@ export const DemoForm: React.FC = () => {
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
                       <Building2 className="w-3.5 h-3.5 text-[#20D477]" />
-                      Rede de Supermercados *
+                      Rede de supermercados *
                     </label>
                     <input
                       type="text"
@@ -181,7 +149,7 @@ export const DemoForm: React.FC = () => {
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
                       <Store className="w-3.5 h-3.5 text-[#20D477]" />
-                      Número de Lojas / Unidades
+                      Número de unidades
                     </label>
                     <select
                       name="unitCount"
@@ -189,82 +157,66 @@ export const DemoForm: React.FC = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
                     >
-                      <option value="5-10">5 a 10 unidades</option>
-                      <option value="11-25">11 a 25 unidades</option>
-                      <option value="26-50">26 a 50 unidades</option>
-                      <option value="50+">Mais de 50 unidades</option>
+                      <option value="5 a 10 unidades">5 a 10 unidades</option>
+                      <option value="11 a 25 unidades">11 a 25 unidades</option>
+                      <option value="26 a 50 unidades">26 a 50 unidades</option>
+                      <option value="Mais de 50 unidades">Mais de 50 unidades</option>
                     </select>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* WhatsApp */}
+                  {/* WhatsApp ou e-mail corporativo */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-[#20D477]" />
-                      WhatsApp Corporativo *
+                      WhatsApp ou e-mail corporativo *
                     </label>
                     <input
-                      type="tel"
-                      name="whatsapp"
-                      value={formData.whatsapp}
+                      type="text"
+                      name="contactInfo"
+                      value={formData.contactInfo}
                       onChange={handleChange}
-                      placeholder="(00) 90000-0000"
+                      placeholder="(00) 90000-0000 ou email@suarede.com.br"
                       className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
                       required
                     />
                   </div>
 
-                  {/* E-mail corporativo */}
+                  {/* Melhor horário para contato */}
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
-                      <Mail className="w-3.5 h-3.5 text-[#20D477]" />
-                      E-mail Corporativo *
+                      <Clock className="w-3.5 h-3.5 text-[#20D477]" />
+                      Melhor horário para contato
                     </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
+                    <select
+                      name="preferredTime"
+                      value={formData.preferredTime}
                       onChange={handleChange}
-                      placeholder="nome@suarede.com.br"
                       className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
-                      required
-                    />
+                    >
+                      <option value="Manhã (09h - 12h)">Manhã (09h - 12h)</option>
+                      <option value="Tarde (14h - 18h)">Tarde (14h - 18h)</option>
+                      <option value="Qualquer Horário Comercial">Qualquer Horário Comercial</option>
+                    </select>
                   </div>
                 </div>
 
-                {/* Melhor horário */}
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#A7B0AB] flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-[#20D477]" />
-                    Melhor Horário para Contato
-                  </label>
-                  <select
-                    name="preferredTime"
-                    value={formData.preferredTime}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-[#090D0F] border border-[#253039] text-[#F4F7F5] text-xs focus:outline-none focus:border-[#20D477] focus:ring-1 focus:ring-[#20D477] transition-all"
-                  >
-                    <option value="Manhã (09h - 12h)">Manhã (09h - 12h)</option>
-                    <option value="Tarde (14h - 18h)">Tarde (14h - 18h)</option>
-                    <option value="Qualquer Horário">Qualquer Horário Comercial</option>
-                  </select>
-                </div>
-
-                {/* Submit Button */}
+                {/* Submit Button from BLOCO 8 */}
                 <Button
                   type="submit"
                   variant="primary"
                   size="lg"
                   isLoading={status === 'loading'}
-                  className="w-full mt-6"
-                  rightIcon={status !== 'loading' ? <Send className="w-4 h-4" /> : undefined}
+                  className="w-full mt-6 min-h-[50px] font-black text-sm"
+                  rightIcon={status !== 'loading' ? <Send className="w-4 h-4 text-[#090D0F]" /> : undefined}
                 >
-                  AGENDAR DEMONSTRAÇÃO
+                  Agendar uma demonstração
                 </Button>
 
-                <p className="text-[10px] text-[#6F7B75] text-center pt-2">
-                  Seus dados estão protegidos. Atendimento exclusivo para redes de supermercados.
+                {/* Microcopy from BLOCO 8 */}
+                <p className="text-xs text-[#A7B0AB] text-center pt-2 font-medium">
+                  Sem compromisso. Reunião focada na realidade da sua rede.
                 </p>
               </form>
             )}
@@ -276,14 +228,14 @@ export const DemoForm: React.FC = () => {
               <div className="flex items-center justify-between pb-3 border-b border-[#253039]">
                 <span className="text-[11px] font-extrabold text-[#20D477] uppercase tracking-wider flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
-                  Prévia em Tempo Real
+                  Demonstração da Plataforma
                 </span>
                 <span className="text-[10px] px-2 py-0.5 rounded bg-[#20D477]/10 text-[#20D477] font-semibold">
-                  Personalizado
+                  Ambiente Próprio
                 </span>
               </div>
 
-              {/* Dynamic Header mockup showing typed brand name */}
+              {/* Dynamic Header mockup */}
               <div className="p-4 rounded-xl bg-[#12181D] border border-[#20D477]/40 space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-6 h-6 rounded bg-[#20D477] text-[#090D0F] font-bold text-xs flex items-center justify-center">
@@ -301,13 +253,13 @@ export const DemoForm: React.FC = () => {
 
                 <div className="p-3 rounded-lg bg-[#090D0F] border border-[#253039] space-y-1.5">
                   <div className="text-[10px] text-[#A7B0AB] font-semibold">
-                    Painel da Matriz Configurado:
+                    Configuração de Demonstração:
                   </div>
                   <div className="text-xs font-extrabold text-[#F4F7F5]">
-                    {formData.unitCount} Unidades Sincronizadas
+                    {formData.unitCount}
                   </div>
                   <div className="text-[10px] text-[#6F7B75]">
-                    Manual de Marca & Permissões Ativadas
+                    Acesso para Matriz + Gerentes de Unidade
                   </div>
                 </div>
               </div>
@@ -315,11 +267,11 @@ export const DemoForm: React.FC = () => {
               <div className="space-y-2 text-xs text-[#A7B0AB] pt-2">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#20D477]" />
-                  <span>Ambiente seguro isolado para a sua rede</span>
+                  <span>Atendimento dedicado e sem compromisso</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#20D477]" />
-                  <span>Sem necessidade de instalação no computador</span>
+                  <span>Apresentação objetiva e focada na operação</span>
                 </div>
               </div>
             </div>

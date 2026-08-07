@@ -6,7 +6,6 @@ import {
   Store, 
   ShieldCheck, 
   Lock, 
-  Sliders, 
   Palette, 
   FileSpreadsheet, 
   Users, 
@@ -43,13 +42,20 @@ export const MatrixUnits: React.FC = () => {
   ];
 
   return (
-    <section id="matriz-unidades" className="py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section id="matriz-unidades" className="py-16 sm:py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="MATRIZ + UNIDADES"
           title="A matriz mantém o padrão. Cada loja ganha velocidade."
-          description="A arquitetura do Sensor Mercado separa com clareza o papel da governança institucional da execução comercial no ponto de venda."
+          description="Sua equipe central protege a identidade da marca e disponibiliza modelos aprovados. As unidades ganham autonomia para adaptar ofertas locais sem transformar a comunicação da rede em uma bagunça."
         />
+
+        {/* Highlight Callout from BLOCO 5 */}
+        <div className="my-8 max-w-3xl mx-auto p-4 rounded-xl bg-[#171E24] border border-[#20D477]/40 text-center shadow-lg">
+          <p className="text-base sm:text-lg font-black text-[#20D477] tracking-tight">
+            Um padrão para a rede. Liberdade na medida certa para cada loja.
+          </p>
+        </div>
 
         {/* Mobile Tab Switcher */}
         <div className="flex md:hidden items-center justify-center gap-2 mb-8 p-1.5 rounded-xl bg-[#12181D] border border-[#253039]">
@@ -80,13 +86,13 @@ export const MatrixUnits: React.FC = () => {
         </div>
 
         {/* Split Interactive View Container */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-          {/* LEFT: MATRIZ (Controle sem microgerenciamento) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-stretch mt-6">
+          {/* LEFT: MATRIZ */}
           <div
             onMouseEnter={() => setHoveredSide('matrix')}
             onMouseLeave={() => setHoveredSide(null)}
             className={cn(
-              'md:col-span-6 lg:col-span-5 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between',
+              'md:col-span-6 lg:col-span-6 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between',
               mobileTab === 'unit' && 'hidden md:flex',
               hoveredSide === 'matrix'
                 ? 'bg-[#171E24] border-[#20D477] shadow-[0_0_40px_rgba(32,212,119,0.15)]'
@@ -101,7 +107,7 @@ export const MatrixUnits: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-extrabold text-[#F4F7F5]">MATRIZ</h3>
-                    <p className="text-xs text-[#20D477] font-semibold">Controle sem microgerenciamento</p>
+                    <p className="text-xs text-[#20D477] font-semibold">Mantém o padrão da marca</p>
                   </div>
                 </div>
                 <Lock className="w-5 h-5 text-[#20D477]" />
@@ -139,12 +145,12 @@ export const MatrixUnits: React.FC = () => {
             </div>
           </div>
 
-          {/* RIGHT: UNIDADE (Autonomia sem bagunçar a marca) */}
+          {/* RIGHT: UNIDADE */}
           <div
             onMouseEnter={() => setHoveredSide('unit')}
             onMouseLeave={() => setHoveredSide(null)}
             className={cn(
-              'md:col-span-6 lg:col-span-5 lg:col-start-8 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between',
+              'md:col-span-6 lg:col-span-6 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between',
               mobileTab === 'matrix' && 'hidden md:flex',
               hoveredSide === 'unit'
                 ? 'bg-[#171E24] border-[#20D477] shadow-[0_0_40px_rgba(32,212,119,0.15)]'
@@ -159,7 +165,7 @@ export const MatrixUnits: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-extrabold text-[#F4F7F5]">UNIDADE</h3>
-                    <p className="text-xs text-[#20D477] font-semibold">Autonomia sem bagunçar a marca</p>
+                    <p className="text-xs text-[#20D477] font-semibold">Ganha velocidade nas ofertas</p>
                   </div>
                 </div>
                 <Sparkles className="w-5 h-5 text-[#20D477]" />
@@ -199,7 +205,7 @@ export const MatrixUnits: React.FC = () => {
         </div>
 
         {/* Central Visual Flow Summary Box */}
-        <div className="mt-12 p-6 rounded-2xl bg-[#171E24] border border-[#20D477]/30 text-center max-w-4xl mx-auto">
+        <div className="mt-10 p-6 rounded-2xl bg-[#171E24] border border-[#20D477]/30 text-center max-w-4xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-bold text-[#F4F7F5]">
             <span className="flex items-center gap-2">
               <Building2 className="w-4 h-4 text-[#20D477]" />
@@ -208,7 +214,7 @@ export const MatrixUnits: React.FC = () => {
             <ArrowRight className="w-4 h-4 text-[#20D477]" />
             <span className="text-[#20D477]">PADRÃO DA MARCA</span>
             <ArrowRight className="w-4 h-4 text-[#20D477]" />
-            <span>AUTONOMIA CONTROLADA</span>
+            <span>LIBERDADE REGULADA</span>
             <ArrowRight className="w-4 h-4 text-[#20D477]" />
             <span className="flex items-center gap-2">
               <Store className="w-4 h-4 text-[#20D477]" />

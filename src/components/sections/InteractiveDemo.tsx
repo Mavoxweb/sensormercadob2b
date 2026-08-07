@@ -12,7 +12,8 @@ import {
   Tag, 
   Play,
   FileCheck,
-  ExternalLink
+  ExternalLink,
+  ShieldCheck
 } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Button } from '../ui/Button';
@@ -70,8 +71,8 @@ export const InteractiveDemo: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="EXPERIMENTE AGORA"
-          title="Não imagine. Gere uma campanha."
-          description="Selecione os parâmetros da sua rede abaixo e simule em tempo real a criação, montagem do encarte e distribuição controlada para as suas unidades."
+          title="Não imagine. Gere um encarte em tempo real."
+          description="Escolha entre algumas opções guiadas e veja um encarte ganhar forma na hora. Esta é uma versão demonstrativa — a plataforma da sua rede será personalizada com sua marca, regras e unidades."
         />
 
         {/* Live Demo Banner Card */}
@@ -183,17 +184,24 @@ export const InteractiveDemo: React.FC = () => {
                 </div>
               </div>
 
-              {/* Generate Button */}
-              <Button
-                variant="primary"
-                size="lg"
-                onClick={handleGenerate}
-                isLoading={isGenerating}
-                className="w-full mt-4 min-h-[50px]"
-                leftIcon={!isGenerating ? <Play className="w-4 h-4 fill-current" /> : undefined}
-              >
-                {isGenerating ? 'PROCESSANDO CAMPANHA...' : 'GERAR CAMPANHA DA REDE'}
-              </Button>
+              {/* Generate Button with BLOCO 3 Copy & Microcopy */}
+              <div className="mt-4 space-y-2">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={handleGenerate}
+                  isLoading={isGenerating}
+                  className="w-full min-h-[50px] font-black text-sm"
+                  leftIcon={!isGenerating ? <Play className="w-4 h-4 fill-current" /> : undefined}
+                >
+                  {isGenerating ? 'GERANDO ENCARTE...' : 'Gerar meu encarte'}
+                </Button>
+
+                {/* Microcopy: Leva menos de 1 minuto. Nenhum cadastro para testar. */}
+                <p className="text-[11px] text-[#A7B0AB] text-center font-medium">
+                  Leva menos de 1 minuto. Nenhum cadastro para testar.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -207,11 +215,11 @@ export const InteractiveDemo: React.FC = () => {
                 </div>
                 <div className="space-y-2">
                   <div className="text-base sm:text-lg font-bold text-[#F4F7F5]">
-                    {generationStep === 1 && '1. Criando campanha na Matriz...'}
-                    {generationStep === 2 && '2. Processando imagens de produtos...'}
-                    {generationStep === 3 && '3. Aplicando manual de marca e molduras...'}
-                    {generationStep === 4 && `4. Distribuindo ofertas para ${unitCount} unidades...`}
-                    {generationStep === 5 && '5. Finalizando validações comerciais!'}
+                    {generationStep === 1 && '1. Gerando encarte na Matriz...'}
+                    {generationStep === 2 && '2. Carregando imagens de produtos...'}
+                    {generationStep === 3 && '3. Aplicando identidade e molduras da marca...'}
+                    {generationStep === 4 && `4. Distribuindo encarte para ${unitCount} unidades...`}
+                    {generationStep === 5 && '5. Encarte finalizado com sucesso!'}
                   </div>
                   <div className="w-full max-w-xs h-2 rounded-full bg-[#12181D] mx-auto overflow-hidden">
                     <motion.div
@@ -241,10 +249,10 @@ export const InteractiveDemo: React.FC = () => {
                     </div>
                     <div>
                       <div className="text-sm sm:text-base font-extrabold text-[#F4F7F5]">
-                        Campanha Matriz: {campaignLabels[campaign]} ({segmentLabels[segment]})
+                        Encarte da Rede: {campaignLabels[campaign]} ({segmentLabels[segment]})
                       </div>
                       <div className="text-xs text-[#A7B0AB]">
-                        Distribuída para {unitCount} unidades com autonomia de preços locais ativada
+                        Distribuído para {unitCount} unidades com autonomia de preços locais ativada
                       </div>
                     </div>
                   </div>
@@ -262,7 +270,7 @@ export const InteractiveDemo: React.FC = () => {
                       {/* Flyer Header Banner */}
                       <div className="rounded-lg bg-gradient-to-r from-[#0E8F4C] via-[#20D477] to-[#0E8F4C] p-3 sm:p-4 text-center mb-4">
                         <div className="text-[10px] font-black tracking-widest text-[#090D0F] uppercase">
-                          REDE SUPERMAIS • MATRIZ CENTRAL
+                          SUA REDE DE SUPERMERCADOS • MATRIZ
                         </div>
                         <div className="text-lg sm:text-xl font-black text-[#090D0F] uppercase tracking-tight">
                           {campaignLabels[campaign]}
@@ -312,7 +320,7 @@ export const InteractiveDemo: React.FC = () => {
 
                     <div className="mt-4 pt-3 border-t border-[#253039] flex flex-col sm:flex-row items-center justify-between gap-1 text-xs text-[#A7B0AB]">
                       <span>Manual de Marca: 100% Protegido</span>
-                      <span className="text-[#20D477] font-semibold">Formatos: A4, Feed 1:1, Stories 9:16</span>
+                      <span className="text-[#20D477] font-semibold">Formatos: A4 Impresso, Feed 1:1, Stories 9:16</span>
                     </div>
                   </div>
 
@@ -354,16 +362,16 @@ export const InteractiveDemo: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Final Banner & CTA */}
+                    {/* Final Conclusion Copy & CTA from BLOCO 3 */}
                     <div className="pt-4 border-t border-[#253039] space-y-3">
-                      <p className="text-xs text-[#F4F7F5] font-semibold text-center leading-relaxed">
+                      <p className="text-xs sm:text-sm text-[#F4F7F5] font-semibold text-center leading-relaxed">
                         Agora imagine todas as suas unidades criando assim — com a identidade e o controle da sua rede.
                       </p>
                       <Button
                         variant="primary"
                         size="md"
                         onClick={scrollToDemo}
-                        className="w-full justify-center min-h-[44px]"
+                        className="w-full justify-center min-h-[44px] font-bold text-xs"
                         rightIcon={<ArrowRight className="w-4 h-4" />}
                       >
                         Agendar demonstração personalizada
@@ -378,9 +386,9 @@ export const InteractiveDemo: React.FC = () => {
             {!hasGenerated && !isGenerating && (
               <div className="py-10 sm:py-12 bg-[#12181D] rounded-xl border border-[#253039] text-center space-y-3 p-4">
                 <Sparkles className="w-8 h-8 text-[#20D477] mx-auto" />
-                <h4 className="text-base sm:text-lg font-bold text-[#F4F7F5]">Configure acima e clique em "GERAR CAMPANHA"</h4>
+                <h4 className="text-base sm:text-lg font-bold text-[#F4F7F5]">Configure acima e clique em "Gerar meu encarte"</h4>
                 <p className="text-xs text-[#A7B0AB] max-w-md mx-auto">
-                  Veja em segundos como a Matriz cria e distribui os materiais para 5, 10, 20 ou 50 lojas instantaneamente.
+                  Leva menos de 1 minuto. Nenhum cadastro para testar.
                 </p>
               </div>
             )}
