@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Zap, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, ExternalLink } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 export const FinalCTA: React.FC = () => {
@@ -14,7 +14,7 @@ export const FinalCTA: React.FC = () => {
   };
 
   return (
-    <section className="py-24 lg:py-36 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
       {/* Subtle Green Radial Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] hero-glow pointer-events-none opacity-80" />
 
@@ -36,21 +36,25 @@ export const FinalCTA: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Button
-            variant="primary"
-            size="lg"
-            onClick={() => scrollTo('#prototipo')}
-            leftIcon={<Zap className="w-5 h-5 fill-current" />}
+          <a
+            href="https://www.sensormercado.com.br/demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-black bg-[#20D477] text-[#090D0F] hover:bg-[#18BC68] transition-all shadow-[0_0_25px_rgba(32,212,119,0.4)] active:scale-98 min-h-[52px]"
           >
-            Experimentar a plataforma
-          </Button>
+            <Sparkles className="w-5 h-5" />
+            <span>ACESSAR DEMO LIVE ON-LINE</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
+
           <Button
             variant="secondary"
             size="lg"
+            className="w-full sm:w-auto min-h-[52px]"
             onClick={() => scrollTo('#demonstracao')}
             rightIcon={<ArrowRight className="w-5 h-5 text-[#20D477]" />}
           >
-            Agendar demonstração
+            Agendar demonstração comercial
           </Button>
         </div>
       </div>

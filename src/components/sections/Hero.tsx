@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, CheckCircle, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, CheckCircle, ExternalLink } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { HeroProductDemo } from './HeroProductDemo';
@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-32 sm:pt-40 pb-20 lg:pb-28 overflow-hidden bg-[#090D0F]">
+    <section className="relative pt-28 sm:pt-40 pb-16 lg:pb-28 overflow-hidden bg-[#090D0F]">
       {/* Background Radial Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] hero-glow pointer-events-none opacity-90" />
       
@@ -33,54 +33,56 @@ export const Hero: React.FC = () => {
           </Badge>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#F4F7F5] tracking-tight leading-[1.08]">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#F4F7F5] tracking-tight leading-[1.1] sm:leading-[1.08] break-words">
             Sua rede inteira criando campanhas.{' '}
-            <span className="block text-[#20D477] drop-shadow-[0_0_25px_rgba(32,212,119,0.3)] mt-1">
+            <span className="block text-[#20D477] drop-shadow-[0_0_25px_rgba(32,212,119,0.3)] mt-1 sm:mt-2">
               Sem perder o padrão da marca.
             </span>
           </h1>
 
           {/* Description */}
-          <p className="text-lg sm:text-xl text-[#A7B0AB] font-normal leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-xl text-[#A7B0AB] font-normal leading-relaxed max-w-3xl">
             Centralize modelos e identidade na matriz. Dê autonomia para cada unidade adaptar produtos, preços e ofertas locais. Gere materiais para digital e impressão em minutos.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 w-full sm:w-auto">
-            <Button
-              variant="primary"
-              size="lg"
-              className="w-full sm:w-auto"
-              onClick={() => scrollTo('#prototipo')}
-              leftIcon={<Zap className="w-5 h-5 fill-current" />}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 w-full sm:w-auto">
+            {/* Primary Action: Direct Live Demo */}
+            <a
+              href="https://www.sensormercado.com.br/demo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-sm font-black bg-[#20D477] text-[#090D0F] hover:bg-[#18BC68] transition-all shadow-[0_0_30px_rgba(32,212,119,0.4)] active:scale-98 min-h-[52px]"
             >
-              Experimentar a plataforma
-            </Button>
+              <Sparkles className="w-5 h-5" />
+              <span>ACESSAR DEMO LIVE ONLINE</span>
+              <ExternalLink className="w-4 h-4" />
+            </a>
 
             <Button
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto"
-              onClick={() => scrollTo('#demonstracao')}
+              className="w-full sm:w-auto min-h-[52px]"
+              onClick={() => scrollTo('#prototipo')}
               rightIcon={<ArrowRight className="w-5 h-5 text-[#20D477]" />}
             >
-              Agendar demonstração
+              Simular na página
             </Button>
           </div>
 
           {/* B2B Commercial Microcopy */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs font-semibold text-[#A7B0AB]">
-            <span className="flex items-center gap-2">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-8 text-xs font-semibold text-[#A7B0AB]">
+            <span className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-[#20D477]" />
               Aquisição única
             </span>
             <span className="hidden sm:inline text-[#253039]">•</span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-[#20D477]" />
               Plataforma personalizada
             </span>
             <span className="hidden sm:inline text-[#253039]">•</span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-1.5">
               <Sparkles className="w-4 h-4 text-[#20D477]" />
               Acesso vitalício
             </span>

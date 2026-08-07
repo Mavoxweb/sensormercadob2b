@@ -1,16 +1,17 @@
 'use client';
 
 import React from 'react';
+import { ExternalLink, Sparkles } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    { label: 'Produto', href: '#produto' },
-    { label: 'Como funciona', href: '#como-funciona' },
-    { label: 'Demonstração', href: '#demonstracao' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Privacidade & Termos', href: '#faq' },
+    { label: 'Produto', href: '#produto', isExternal: false },
+    { label: 'Como funciona', href: '#como-funciona', isExternal: false },
+    { label: 'Demo On-line', href: 'https://www.sensormercado.com.br/demo', isExternal: true },
+    { label: 'Demonstração', href: '#demonstracao', isExternal: false },
+    { label: 'FAQ', href: '#faq', isExternal: false },
   ];
 
   return (
@@ -38,9 +39,12 @@ export const Footer: React.FC = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-[#A7B0AB] hover:text-[#20D477] transition-colors"
+                target={link.isExternal ? '_blank' : undefined}
+                rel={link.isExternal ? 'noopener noreferrer' : undefined}
+                className="text-sm text-[#A7B0AB] hover:text-[#20D477] transition-colors flex items-center gap-1"
               >
-                {link.label}
+                <span>{link.label}</span>
+                {link.isExternal && <ExternalLink className="w-3 h-3 text-[#20D477]" />}
               </a>
             ))}
           </nav>

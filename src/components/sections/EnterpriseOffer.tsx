@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, Sparkles, Building, Headphones, ArrowRight, Check } from 'lucide-react';
+import { ShieldCheck, Sparkles, Building, Headphones, ArrowRight, Check, ExternalLink } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Button } from '../ui/Button';
 
@@ -76,13 +76,25 @@ export const EnterpriseOffer: React.FC = () => {
           })}
         </div>
 
-        {/* CTA Box */}
-        <div className="mt-12 text-center">
+        {/* CTA Buttons */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <a
+            href="https://www.sensormercado.com.br/demo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-black bg-[#20D477] text-[#090D0F] hover:bg-[#18BC68] transition-all shadow-[0_0_20px_rgba(32,212,119,0.3)] active:scale-98 min-h-[50px]"
+          >
+            <Sparkles className="w-5 h-5" />
+            <span>ACESSAR DEMO LIVE ON-LINE</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
+
           <Button
-            variant="primary"
+            variant="secondary"
             size="lg"
             onClick={scrollToDemo}
-            rightIcon={<ArrowRight className="w-5 h-5" />}
+            className="w-full sm:w-auto min-h-[50px]"
+            rightIcon={<ArrowRight className="w-5 h-5 text-[#20D477]" />}
           >
             Entender a implantação para a minha rede
           </Button>
