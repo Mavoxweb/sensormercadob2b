@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-main: #090D0F;
+    --bg-sec: #0D1215;
+    --surface: #12181D;
+    --surface-elevated: #171E24;
+    --border: #253039;
+    --border-soft: rgba(255, 255, 255, 0.08);
+
+    --primary-green: #20D477;
+    --primary-green-hover: #18BC68;
+    --primary-green-light: #52E79A;
+    --primary-green-dark: #0E8F4C;
+    --green-glow: rgba(32, 212, 119, 0.18);
+
+    --text-primary: #F4F7F5;
+    --text-secondary: #A7B0AB;
+    --text-muted: #6F7B75;
+    --white: #FFFFFF;
+
+    --success: #20D477;
+    --warning: #F5B942;
+    --error: #EF5B5B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Utilities for Sensor Mercado Enterprise Dark Theme */
+.bg-main { background-color: var(--bg-main); }
+.bg-sec { background-color: var(--bg-sec); }
+.bg-surface { background-color: var(--surface); }
+.bg-surface-elevated { background-color: var(--surface-elevated); }
+
+.border-custom { border-color: var(--border); }
+.border-soft { border-color: var(--border-soft); }
+
+.text-sensor-primary { color: var(--text-primary); }
+.text-sensor-secondary { color: var(--text-secondary); }
+.text-sensor-muted { color: var(--text-muted); }
+.text-sensor-green { color: var(--primary-green); }
+
+.bg-sensor-green { background-color: var(--primary-green); }
+.bg-sensor-green-dark { background-color: var(--primary-green-dark); }
+.hover\:bg-sensor-green-hover:hover { background-color: var(--primary-green-hover); }
+
+/* Glow Effects */
+.hero-glow {
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(32, 212, 119, 0.15) 0%,
+    rgba(32, 212, 119, 0.04) 40%,
+    transparent 75%
+  );
+}
+
+.card-glow {
+  position: relative;
+}
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(32, 212, 119, 0.3) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.green-shadow {
+  box-shadow: 0 0 30px rgba(32, 212, 119, 0.15);
+}
+
+.green-shadow-sm {
+  box-shadow: 0 0 15px rgba(32, 212, 119, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090D0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #253039;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #20D477;
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
