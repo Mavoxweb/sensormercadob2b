@@ -28,8 +28,8 @@ export const Accordion: React.FC<AccordionProps> = ({ items, className }) => {
             className={cn(
               'rounded-2xl transition-all duration-200 overflow-hidden border',
               isOpen
-                ? 'bg-[#171E24] border-[#20D477]/40 shadow-[0_4px_20px_rgba(0,0,0,0.4)]'
-                : 'bg-[#12181D] border-[#253039] hover:border-[rgba(255,255,255,0.15)]'
+                ? 'bg-[#FFFFFF] border-[#F59E0B] shadow-[0_4px_20px_rgba(245,158,11,0.15)]'
+                : 'bg-[#FFFFFF] border-[#DFDFDD] hover:border-[#F59E0B]/50 shadow-sm'
             )}
           >
             <button
@@ -38,13 +38,13 @@ export const Accordion: React.FC<AccordionProps> = ({ items, className }) => {
               aria-controls={`faq-accordion-content-${index}`}
               aria-expanded={isOpen}
               onClick={() => toggle(index)}
-              className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left font-semibold text-base sm:text-lg text-[#F4F7F5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20D477]"
+              className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left font-extrabold text-base sm:text-lg text-[#2B2523] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]"
             >
               <span>{item.question}</span>
               <span
                 className={cn(
-                  'p-1.5 rounded-lg bg-[#0D1215] border border-[#253039] text-[#A7B0AB] transition-transform duration-200 shrink-0',
-                  isOpen && 'transform rotate-180 text-[#20D477] border-[#20D477]/40'
+                  'p-1.5 rounded-lg bg-[#F9F7F3] border border-[#DFDFDD] text-[#69433C] transition-transform duration-200 shrink-0',
+                  isOpen && 'transform rotate-180 text-[#F59E0B] border-[#F59E0B]/40 bg-[#F4EDE2]'
                 )}
               >
                 <ChevronDown className="w-5 h-5" />
@@ -61,7 +61,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items, className }) => {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.25, ease: 'easeInOut' }}
                 >
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#A7B0AB] leading-relaxed border-t border-[#253039]/50">
+                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#69433C] leading-relaxed border-t border-[#DFDFDD]/60">
                     {item.answer}
                   </div>
                 </motion.div>

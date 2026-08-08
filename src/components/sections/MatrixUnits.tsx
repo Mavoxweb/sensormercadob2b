@@ -42,30 +42,30 @@ export const MatrixUnits: React.FC = () => {
   ];
 
   return (
-    <section id="matriz-unidades" className="py-16 sm:py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section id="matriz-unidades" className="py-16 sm:py-20 lg:py-32 bg-[#F9F7F3] border-t border-[#DFDFDD] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="MATRIZ + UNIDADES"
-          title="A matriz mantém o padrão. Cada loja ganha velocidade."
-          description="Sua equipe central protege a identidade da marca e disponibiliza modelos aprovados. As unidades ganham autonomia para adaptar ofertas locais sem transformar a comunicação da rede em uma bagunça."
+          eyebrow="UM PADRÃO PRA REDE"
+          title="Um padrão pra rede. Liberdade na medida pra cada loja."
+          description="Você cria o modelo que mantém a marca igual em todo lugar. Cada loja mexe só no que é da região, preço e oferta local, sem bagunçar a comunicação da rede."
         />
 
         {/* Highlight Callout from BLOCO 5 */}
-        <div className="my-8 max-w-3xl mx-auto p-4 rounded-xl bg-[#171E24] border border-[#20D477]/40 text-center shadow-lg">
-          <p className="text-base sm:text-lg font-black text-[#20D477] tracking-tight">
-            Um padrão para a rede. Liberdade na medida certa para cada loja.
+        <div className="my-8 max-w-3xl mx-auto p-4 rounded-xl bg-[#FFFFFF] border border-[#F59E0B]/50 text-center shadow-sm">
+          <p className="text-base sm:text-lg font-black text-[#F59E0B] tracking-tight">
+            Sua marca protegida. Suas lojas com a mão livre onde importa.
           </p>
         </div>
 
         {/* Mobile Tab Switcher */}
-        <div className="flex md:hidden items-center justify-center gap-2 mb-8 p-1.5 rounded-xl bg-[#12181D] border border-[#253039]">
+        <div className="flex md:hidden items-center justify-center gap-2 mb-8 p-1.5 rounded-xl bg-[#F4EDE2] border border-[#DFDFDD]">
           <button
             onClick={() => setMobileTab('matrix')}
             className={cn(
               'flex-1 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2',
               mobileTab === 'matrix'
-                ? 'bg-[#20D477] text-[#090D0F]'
-                : 'text-[#A7B0AB] hover:text-[#F4F7F5]'
+                ? 'bg-[#F59E0B] text-[#2B2523] shadow-sm font-extrabold'
+                : 'text-[#69433C] hover:text-[#2B2523]'
             )}
           >
             <Building2 className="w-4 h-4" />
@@ -76,8 +76,8 @@ export const MatrixUnits: React.FC = () => {
             className={cn(
               'flex-1 py-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-2',
               mobileTab === 'unit'
-                ? 'bg-[#20D477] text-[#090D0F]'
-                : 'text-[#A7B0AB] hover:text-[#F4F7F5]'
+                ? 'bg-[#F59E0B] text-[#2B2523] shadow-sm font-extrabold'
+                : 'text-[#69433C] hover:text-[#2B2523]'
             )}
           >
             <Store className="w-4 h-4" />
@@ -92,25 +92,25 @@ export const MatrixUnits: React.FC = () => {
             onMouseEnter={() => setHoveredSide('matrix')}
             onMouseLeave={() => setHoveredSide(null)}
             className={cn(
-              'md:col-span-6 lg:col-span-6 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between',
+              'md:col-span-6 lg:col-span-6 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between shadow-sm',
               mobileTab === 'unit' && 'hidden md:flex',
               hoveredSide === 'matrix'
-                ? 'bg-[#171E24] border-[#20D477] shadow-[0_0_40px_rgba(32,212,119,0.15)]'
-                : 'bg-[#12181D] border-[#253039]'
+                ? 'bg-[#FFFFFF] border-[#F59E0B] shadow-md'
+                : 'bg-[#FFFFFF] border-[#DFDFDD]'
             )}
           >
             <div className="space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-[#253039]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#DFDFDD]">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-[#20D477]/10 text-[#20D477] border border-[#20D477]/30">
+                  <div className="p-3 rounded-xl bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30">
                     <Building2 className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-extrabold text-[#F4F7F5]">MATRIZ</h3>
-                    <p className="text-xs text-[#20D477] font-semibold">Mantém o padrão da marca</p>
+                    <h3 className="text-xl font-extrabold text-[#2B2523]">MATRIZ</h3>
+                    <p className="text-xs text-[#F59E0B] font-bold">Mantém o padrão da marca</p>
                   </div>
                 </div>
-                <Lock className="w-5 h-5 text-[#20D477]" />
+                <Lock className="w-5 h-5 text-[#F59E0B]" />
               </div>
 
               <div className="space-y-3">
@@ -122,16 +122,16 @@ export const MatrixUnits: React.FC = () => {
                       className={cn(
                         'p-3.5 rounded-xl border text-xs transition-all flex items-start gap-3',
                         hoveredSide === 'matrix'
-                          ? 'bg-[#090D0F] border-[#20D477]/30 text-[#F4F7F5]'
-                          : 'bg-[#090D0F]/60 border-[#253039] text-[#A7B0AB]'
+                          ? 'bg-[#F9F7F3] border-[#F59E0B]/40 text-[#2B2523]'
+                          : 'bg-[#F9F7F3] border-[#DFDFDD] text-[#69433C]'
                       )}
                     >
-                      <div className="p-2 rounded-lg bg-[#171E24] text-[#20D477] shrink-0 mt-0.5">
+                      <div className="p-2 rounded-lg bg-[#FFFFFF] text-[#F59E0B] border border-[#DFDFDD] shrink-0 mt-0.5 shadow-sm">
                         <Icon className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-bold text-[#F4F7F5] text-sm">{item.title}</div>
-                        <div className="text-[11px] text-[#A7B0AB] leading-relaxed mt-0.5">{item.desc}</div>
+                        <div className="font-extrabold text-[#2B2523] text-sm">{item.title}</div>
+                        <div className="text-[11px] text-[#69433C] leading-relaxed mt-0.5">{item.desc}</div>
                       </div>
                     </div>
                   );
@@ -139,7 +139,7 @@ export const MatrixUnits: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-[#253039] text-xs font-bold text-[#20D477] flex items-center justify-between">
+            <div className="mt-8 pt-4 border-t border-[#DFDFDD] text-xs font-extrabold text-[#F59E0B] flex items-center justify-between">
               <span>Resultado da Matriz: Proteção total da marca</span>
               <ShieldCheck className="w-4 h-4" />
             </div>
@@ -150,25 +150,25 @@ export const MatrixUnits: React.FC = () => {
             onMouseEnter={() => setHoveredSide('unit')}
             onMouseLeave={() => setHoveredSide(null)}
             className={cn(
-              'md:col-span-6 lg:col-span-6 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between',
+              'md:col-span-6 lg:col-span-6 rounded-2xl p-6 sm:p-8 transition-all duration-300 border flex flex-col justify-between shadow-sm',
               mobileTab === 'matrix' && 'hidden md:flex',
               hoveredSide === 'unit'
-                ? 'bg-[#171E24] border-[#20D477] shadow-[0_0_40px_rgba(32,212,119,0.15)]'
-                : 'bg-[#12181D] border-[#253039]'
+                ? 'bg-[#FFFFFF] border-[#F59E0B] shadow-md'
+                : 'bg-[#FFFFFF] border-[#DFDFDD]'
             )}
           >
             <div className="space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-[#253039]">
+              <div className="flex items-center justify-between pb-4 border-b border-[#DFDFDD]">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-[#20D477]/10 text-[#20D477] border border-[#20D477]/30">
+                  <div className="p-3 rounded-xl bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30">
                     <Store className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-extrabold text-[#F4F7F5]">UNIDADE</h3>
-                    <p className="text-xs text-[#20D477] font-semibold">Ganha velocidade nas ofertas</p>
+                    <h3 className="text-xl font-extrabold text-[#2B2523]">UNIDADE</h3>
+                    <p className="text-xs text-[#F59E0B] font-bold">Ganha velocidade nas ofertas</p>
                   </div>
                 </div>
-                <Sparkles className="w-5 h-5 text-[#20D477]" />
+                <Sparkles className="w-5 h-5 text-[#F59E0B]" />
               </div>
 
               <div className="space-y-3">
@@ -180,16 +180,16 @@ export const MatrixUnits: React.FC = () => {
                       className={cn(
                         'p-3.5 rounded-xl border text-xs transition-all flex items-start gap-3',
                         hoveredSide === 'unit'
-                          ? 'bg-[#090D0F] border-[#20D477]/30 text-[#F4F7F5]'
-                          : 'bg-[#090D0F]/60 border-[#253039] text-[#A7B0AB]'
+                          ? 'bg-[#F9F7F3] border-[#F59E0B]/40 text-[#2B2523]'
+                          : 'bg-[#F9F7F3] border-[#DFDFDD] text-[#69433C]'
                       )}
                     >
-                      <div className="p-2 rounded-lg bg-[#171E24] text-[#20D477] shrink-0 mt-0.5">
+                      <div className="p-2 rounded-lg bg-[#FFFFFF] text-[#F59E0B] border border-[#DFDFDD] shrink-0 mt-0.5 shadow-sm">
                         <Icon className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-bold text-[#F4F7F5] text-sm">{item.title}</div>
-                        <div className="text-[11px] text-[#A7B0AB] leading-relaxed mt-0.5">{item.desc}</div>
+                        <div className="font-extrabold text-[#2B2523] text-sm">{item.title}</div>
+                        <div className="text-[11px] text-[#69433C] leading-relaxed mt-0.5">{item.desc}</div>
                       </div>
                     </div>
                   );
@@ -197,7 +197,7 @@ export const MatrixUnits: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-[#253039] text-xs font-bold text-[#20D477] flex items-center justify-between">
+            <div className="mt-8 pt-4 border-t border-[#DFDFDD] text-xs font-extrabold text-[#F59E0B] flex items-center justify-between">
               <span>Resultado das Lojas: Agilidade comercial máxima</span>
               <CheckCircle2 className="w-4 h-4" />
             </div>
@@ -205,19 +205,19 @@ export const MatrixUnits: React.FC = () => {
         </div>
 
         {/* Central Visual Flow Summary Box */}
-        <div className="mt-10 p-6 rounded-2xl bg-[#171E24] border border-[#20D477]/30 text-center max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-bold text-[#F4F7F5]">
+        <div className="mt-10 p-6 rounded-2xl bg-[#FFFFFF] border border-[#F59E0B]/40 text-center max-w-4xl mx-auto shadow-sm">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-extrabold text-[#2B2523]">
             <span className="flex items-center gap-2">
-              <Building2 className="w-4 h-4 text-[#20D477]" />
+              <Building2 className="w-4 h-4 text-[#F59E0B]" />
               MATRIZ
             </span>
-            <ArrowRight className="w-4 h-4 text-[#20D477]" />
-            <span className="text-[#20D477]">PADRÃO DA MARCA</span>
-            <ArrowRight className="w-4 h-4 text-[#20D477]" />
+            <ArrowRight className="w-4 h-4 text-[#F59E0B]" />
+            <span className="text-[#F59E0B]">PADRÃO DA MARCA</span>
+            <ArrowRight className="w-4 h-4 text-[#F59E0B]" />
             <span>LIBERDADE REGULADA</span>
-            <ArrowRight className="w-4 h-4 text-[#20D477]" />
+            <ArrowRight className="w-4 h-4 text-[#F59E0B]" />
             <span className="flex items-center gap-2">
-              <Store className="w-4 h-4 text-[#20D477]" />
+              <Store className="w-4 h-4 text-[#F59E0B]" />
               UNIDADES
             </span>
           </div>

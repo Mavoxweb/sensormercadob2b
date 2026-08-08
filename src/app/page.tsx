@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
+import { TargetAudience } from '@/components/sections/TargetAudience';
 import { OperationalProblem } from '@/components/sections/OperationalProblem';
 import { InteractiveDemo } from '@/components/sections/InteractiveDemo';
 import { MatrixUnits } from '@/components/sections/MatrixUnits';
@@ -20,6 +21,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <TargetAudience />
         <OperationalProblem />
         <InteractiveDemo />
         <MatrixUnits />

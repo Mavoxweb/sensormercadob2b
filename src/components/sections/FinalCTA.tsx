@@ -15,26 +15,26 @@ export const FinalCTA: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-[#090D0F] border-t border-[#253039]/60 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-[#F9F7F3] border-t border-[#DFDFDD] relative overflow-hidden">
       {/* Background Radial Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#20D47715_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#F59E0B20_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         {/* Eyebrow */}
-        <Badge variant="green" className="py-1.5 px-4 text-xs tracking-widest uppercase">
+        <Badge variant="amber" className="py-1.5 px-4 text-xs tracking-widest uppercase font-black">
           ÚLTIMO CONVITE
         </Badge>
 
         {/* Headline */}
-        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#F4F7F5] tracking-tight leading-tight">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#2B2523] tracking-tight leading-tight">
           Sua próxima campanha pode começar em minutos —{' '}
-          <span className="text-[#20D477] block mt-1">
+          <span className="text-[#F59E0B] block mt-1">
             e manter o padrão em todas as lojas.
           </span>
         </h2>
 
         {/* Description */}
-        <p className="text-base sm:text-xl text-[#A7B0AB] font-normal leading-relaxed max-w-2xl mx-auto">
+        <p className="text-base sm:text-xl text-[#69433C] font-medium leading-relaxed max-w-2xl mx-auto">
           Teste o protótipo ou agende uma demonstração para ver a plataforma com a identidade da sua rede.
         </p>
 
@@ -45,7 +45,7 @@ export const FinalCTA: React.FC = () => {
             size="lg"
             onClick={() => scrollTo('#prototipo')}
             className="w-full sm:w-auto min-h-[52px] font-black text-sm"
-            leftIcon={<Sparkles className="w-5 h-5" />}
+            leftIcon={<Sparkles className="w-5 h-5 text-[#2B2523]" />}
           >
             Testar o protótipo
           </Button>
@@ -55,7 +55,7 @@ export const FinalCTA: React.FC = () => {
             size="lg"
             onClick={() => scrollTo('#demonstracao')}
             className="w-full sm:w-auto min-h-[52px]"
-            rightIcon={<ArrowRight className="w-5 h-5 text-[#20D477]" />}
+            rightIcon={<ArrowRight className="w-5 h-5 text-[#F59E0B]" />}
           >
             Agendar demonstração
           </Button>
@@ -64,14 +64,14 @@ export const FinalCTA: React.FC = () => {
             href="https://www.sensormercado.com.br/demo"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold bg-[#171E24] text-[#20D477] border border-[#20D477]/40 hover:bg-[#20D477] hover:text-[#090D0F] transition-all min-h-[52px]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs font-extrabold bg-[#F59E0B]/15 text-[#2B2523] border border-[#F59E0B]/40 hover:bg-[#F59E0B] transition-all min-h-[52px] shadow-sm"
           >
             <span>Demo Live Online</span>
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="w-4 h-4 text-[#F59E0B]" />
           </a>
         </div>
 
-        <p className="text-xs text-[#A7B0AB] pt-4 font-semibold">
+        <p className="text-xs text-[#69433C] pt-4 font-semibold">
           Sensor Mercado — A plataforma de encartes da sua rede de supermercados.
         </p>
       </div>

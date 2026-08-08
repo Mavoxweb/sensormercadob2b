@@ -15,20 +15,20 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-[#090D0F] border-t border-[#253039] pt-16 pb-12">
+    <footer className="bg-[#F4EDE2] border-t border-[#DFDFDD] pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-[#253039]/60">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-[#DFDFDD]">
           {/* Brand Info */}
           <div className="flex flex-col gap-3 max-w-md">
             <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded-md bg-[#171E24] border border-[#20D477]/40 flex items-center justify-center">
-                <span className="w-2 h-2 rounded-sm bg-[#20D477]"></span>
+              <div className="w-7 h-7 rounded-md bg-[#FFFFFF] border border-[#F59E0B]/50 flex items-center justify-center shadow-sm">
+                <span className="w-2 h-2 rounded-sm bg-[#F59E0B]"></span>
               </div>
-              <span className="font-extrabold text-xl tracking-tight text-[#F4F7F5]">
-                sensor<span className="text-[#20D477]">mercado</span>
+              <span className="font-extrabold text-xl tracking-tight text-[#2B2523]">
+                sensor<span className="text-[#F59E0B]">mercado</span>
               </span>
             </div>
-            <p className="text-sm text-[#A7B0AB] leading-relaxed">
+            <p className="text-sm text-[#69433C] leading-relaxed">
               Plataforma de infraestrutura para criação e distribuição automatizada de campanhas comerciais para redes de supermercados.
             </p>
           </div>
@@ -41,20 +41,20 @@ export const Footer: React.FC = () => {
                 href={link.href}
                 target={link.isExternal ? '_blank' : undefined}
                 rel={link.isExternal ? 'noopener noreferrer' : undefined}
-                className="text-sm text-[#A7B0AB] hover:text-[#20D477] transition-colors flex items-center gap-1"
+                className="text-sm font-semibold text-[#69433C] hover:text-[#F59E0B] transition-colors flex items-center gap-1"
               >
                 <span>{link.label}</span>
-                {link.isExternal && <ExternalLink className="w-3 h-3 text-[#20D477]" />}
+                {link.isExternal && <ExternalLink className="w-3 h-3 text-[#F59E0B]" />}
               </a>
             ))}
           </nav>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F7B75]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#8F817A]">
           <p>© {currentYear} Sensor Mercado. Todos os direitos reservados.</p>
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#20D477]"></span>
+          <div className="flex items-center gap-2 font-semibold">
+            <span className="w-2 h-2 rounded-full bg-[#F59E0B]"></span>
             <span>Operação Vitalícia Enterprise • Governança Matriz & Unidades</span>
           </div>
         </div>

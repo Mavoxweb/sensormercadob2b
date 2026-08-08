@@ -2,7 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#20D477] focus-visible:ring-offset-2 focus-visible:ring-offset-[#090D0F] disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] select-none';
+    'inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F9F7F3] disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98] select-none';
 
   const sizeStyles = {
     sm: 'px-4 py-2 text-xs gap-1.5 min-h-[38px]',
@@ -31,13 +31,15 @@ export const Button: React.FC<ButtonProps> = ({
 
   const variantStyles = {
     primary:
-      'bg-[#20D477] text-[#090D0F] hover:bg-[#18BC68] shadow-[0_0_20px_rgba(32,212,119,0.25)] hover:shadow-[0_0_30px_rgba(32,212,119,0.4)] border border-[#52E79A]/40 font-bold',
+      'bg-[#F59E0B] text-[#2B2523] hover:bg-[#E89005] shadow-[0_4px_20px_rgba(245,158,11,0.3)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.45)] border border-[#F59E0B]/40 font-extrabold',
+    accent:
+      'bg-[#F59E0B] text-[#2B2523] hover:bg-[#E89005] shadow-[0_4px_20px_rgba(245,158,11,0.3)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.45)] font-extrabold',
     secondary:
-      'bg-[#171E24] text-[#F4F7F5] hover:text-white border border-[#253039] hover:border-[#20D477]/40 hover:bg-[#1C252D]',
+      'bg-[#FFFFFF] text-[#2B2523] hover:text-[#2B2523] border border-[#DFDFDD] hover:border-[#F59E0B]/60 hover:bg-[#F4EDE2]/50 shadow-sm font-bold',
     outline:
-      'bg-transparent text-[#20D477] border border-[#20D477]/50 hover:bg-[#20D477]/10 hover:border-[#20D477]',
+      'bg-transparent text-[#2B2523] border border-[#F59E0B] hover:bg-[#F59E0B]/10 hover:border-[#E89005] font-bold',
     ghost:
-      'bg-transparent text-[#A7B0AB] hover:text-[#F4F7F5] hover:bg-[#12181D]',
+      'bg-transparent text-[#69433C] hover:text-[#2B2523] hover:bg-[#F4EDE2]',
   };
 
   return (

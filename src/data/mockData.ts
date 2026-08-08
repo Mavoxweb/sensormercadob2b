@@ -250,30 +250,30 @@ export const MOCK_STORES = [
 export const WORKFLOW_STEPS: WorkflowStep[] = [
   {
     number: '1',
-    title: 'Personalizamos',
-    shortDesc: 'Nome, logo, cores e identidade visual da rede dentro da plataforma.',
-    fullDesc: 'Customizamos 100% da plataforma com a marca oficial, logos, cores corporativas e fontes proprietárias da sua rede de supermercados.',
+    title: '1. A gente monta com a sua cara',
+    shortDesc: 'Nome, logo e cores da sua rede dentro da plataforma.',
+    fullDesc: 'Personalizamos 100% da plataforma com a sua marca oficial, cores e fontes da sua rede de supermercados.',
     tag: 'ETAPA 01'
   },
   {
     number: '2',
-    title: 'A matriz organiza',
-    shortDesc: 'Define modelos, padrões e o que pode ser adaptado pelas unidades.',
-    fullDesc: 'A equipe central de marketing disponibiliza os modelos oficiais travados, garantindo governança total e zero risco de erro visual.',
+    title: '2. Você define o padrão',
+    shortDesc: 'O modelo pronto que todas as suas lojas vão usar.',
+    fullDesc: 'A matriz cria os modelos aprovados e travados, garantindo alinhamento total de comunicação.',
     tag: 'ETAPA 02'
   },
   {
     number: '3',
-    title: 'As lojas adaptam',
-    shortDesc: 'Cada unidade ajusta produtos, preços e ofertas conforme a realidade local.',
-    fullDesc: 'Os gerentes de loja recebem autonomia regrada para alterar ofertas regionais, vigências e preços sem mexer no design da marca.',
+    title: '3. Cada loja ajusta o que é local',
+    shortDesc: 'Produto, preço e oferta da região, sem fugir do padrão.',
+    fullDesc: 'As lojas ganham autonomia para ajustar ofertas e preços regionais de forma rápida e intuitiva.',
     tag: 'ETAPA 03'
   },
   {
     number: '4',
-    title: 'A rede publica',
-    shortDesc: 'Os encartes ficam prontos para redes sociais e impressão, com publicação pela plataforma.',
-    fullDesc: 'Com um clique, os materiais são exportados em múltiplos formatos (A4 impresso, Feed 1:1, Stories 9:16 e WhatsApp HD) prontos para ação.',
+    title: '4. Sai pronto pra postar e imprimir',
+    shortDesc: 'Encarte pronto pras redes sociais e pra gráfica.',
+    fullDesc: 'Com um clique, os encartes são gerados para Instagram, Stories, WhatsApp e arquivo em alta para impressão.',
     tag: 'ETAPA 04'
   }
 ];
@@ -331,27 +331,27 @@ export const FORMAT_OPTIONS: FormatTypeOption[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "A Sensor Mercado é um site de encartes?",
-    answer: "Não. É uma plataforma personalizada para a sua rede, distribuída entre matriz e unidades."
+    question: "É só um site de encarte?",
+    answer: "Não. É uma plataforma da sua rede, com a sua marca, pra todas as suas lojas."
   },
   {
-    question: "Cada unidade poderá criar seus próprios materiais?",
-    answer: "Sim. A matriz define padrões e permissões; as lojas adaptam produtos, preços e campanhas locais."
+    question: "Cada loja pode criar o próprio material?",
+    answer: "Pode. Você define o padrão e a loja ajusta preço e oferta da região."
   },
   {
-    question: "Serve para redes sociais e impressão?",
-    answer: "Sim. A plataforma cria, publica e gera materiais prontos para impressão."
+    question: "Serve pra rede social e pra impressão?",
+    answer: "Serve. Cria, publica e gera o arquivo pronto pra gráfica."
   },
   {
-    question: "Existe cobrança mensal?",
-    answer: "A proposta é uma aquisição única com acesso vitalício. Condições e escopo são formalizados em contrato."
+    question: "Tem mensalidade?",
+    answer: "Não é o modelo. É uma aquisição única. Suporte e manutenção ficam definidos no contrato."
   },
   {
-    question: "A plataforma terá a identidade da minha rede?",
-    answer: "Sim. Nome, logo, cores e elementos visuais são personalizados."
+    question: "A plataforma fica com a minha marca?",
+    answer: "Fica. Nome, logo e cores são da sua rede."
   },
   {
-    question: "Vocês oferecem suporte e manutenção?",
-    answer: "Sim, conforme o escopo apresentado na demonstração e no contrato."
+    question: "Tem suporte?",
+    answer: "Tem, e acessível. Você fala com gente de verdade, conforme combinado no contrato."
   }
 ];

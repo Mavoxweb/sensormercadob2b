@@ -19,7 +19,6 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   align = 'center',
   className,
 }) => {
-  // If highlightText is provided, split the title and color the highlighted part
   const renderTitle = () => {
     if (!highlightText) return title;
     const parts = title.split(highlightText);
@@ -28,7 +27,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     return (
       <>
         {parts[0]}
-        <span className="text-[#20D477]">{highlightText}</span>
+        <span className="text-[#F59E0B]">{highlightText}</span>
         {parts[1]}
       </>
     );
@@ -42,14 +41,14 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         className
       )}
     >
-      {eyebrow && <Badge variant="green">{eyebrow}</Badge>}
+      {eyebrow && <Badge variant="amber">{eyebrow}</Badge>}
       
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#F4F7F5] leading-[1.15]">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#2B2523] leading-[1.15]">
         {renderTitle()}
       </h2>
 
       {description && (
-        <p className="text-base sm:text-lg text-[#A7B0AB] font-normal leading-relaxed max-w-2xl">
+        <p className="text-base sm:text-lg text-[#69433C] font-normal leading-relaxed max-w-2xl">
           {description}
         </p>
       )}

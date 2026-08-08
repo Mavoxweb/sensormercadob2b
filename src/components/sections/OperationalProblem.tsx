@@ -14,8 +14,7 @@ import {
   UserX,
   ShieldCheck,
   ZapOff,
-  Palette,
-  FileSpreadsheet
+  Palette
 } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 
@@ -60,7 +59,7 @@ export const OperationalProblem: React.FC = () => {
   ];
 
   return (
-    <section id="produto" className="py-16 sm:py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section id="produto" className="py-16 sm:py-20 lg:py-32 bg-[#F4EDE2] border-t border-[#DFDFDD] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="O PROBLEMA"
@@ -75,16 +74,16 @@ export const OperationalProblem: React.FC = () => {
             return (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-[#12181D] border border-[#253039] hover:border-[#EF5B5B]/50 transition-all flex items-start gap-4 group shadow-lg"
+                className="p-6 rounded-2xl bg-[#FFFFFF] border border-[#DFDFDD] hover:border-[#F59E0B]/60 transition-all flex items-start gap-4 group shadow-sm"
               >
-                <div className="p-3 rounded-xl bg-[#EF5B5B]/10 text-[#EF5B5B] border border-[#EF5B5B]/30 shrink-0 group-hover:scale-110 transition-transform">
+                <div className="p-3 rounded-xl bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/40 shrink-0 group-hover:scale-110 transition-transform">
                   <Icon className="w-6 h-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <h3 className="text-lg font-bold text-[#F4F7F5] group-hover:text-[#EF5B5B] transition-colors">
+                  <h3 className="text-lg font-extrabold text-[#2B2523] group-hover:text-[#F59E0B] transition-colors">
                     {point.title}
                   </h3>
-                  <p className="text-sm text-[#A7B0AB] leading-relaxed">
+                  <p className="text-sm text-[#69433C] leading-relaxed">
                     {point.description}
                   </p>
                 </div>
@@ -96,20 +95,20 @@ export const OperationalProblem: React.FC = () => {
         {/* Comparison Visual Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* LEFT: HOJE (Gargalo Tradicional) */}
-          <div className="rounded-2xl bg-[#12181D] border border-[#EF5B5B]/30 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group">
-            <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#EF5B5B]/10 text-[#EF5B5B] text-xs font-bold rounded-bl-xl border-l border-b border-[#EF5B5B]/30 flex items-center gap-1.5">
+          <div className="rounded-2xl bg-[#FFFFFF] border border-[#EF4444]/30 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group shadow-sm">
+            <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#EF4444]/10 text-[#EF4444] text-xs font-bold rounded-bl-xl border-l border-b border-[#EF4444]/30 flex items-center gap-1.5">
               <XCircle className="w-4 h-4" />
               COMO É HOJE (LENTO & IMPROVISADO)
             </div>
 
             <div className="space-y-6">
               <div className="flex items-center gap-3 pt-2">
-                <div className="p-3 rounded-xl bg-[#EF5B5B]/10 text-[#EF5B5B] border border-[#EF5B5B]/30">
+                <div className="p-3 rounded-xl bg-[#EF4444]/10 text-[#EF4444] border border-[#EF4444]/30">
                   <AlertTriangle className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F4F7F5]">Gargalo Operacional</h3>
-                  <p className="text-xs text-[#A7B0AB]">WhatsApp, e-mails soltos e dependência de terceiros</p>
+                  <h3 className="text-xl font-bold text-[#2B2523]">Gargalo Operacional</h3>
+                  <p className="text-xs text-[#69433C]">WhatsApp, e-mails soltos e dependência de terceiros</p>
                 </div>
               </div>
 
@@ -126,25 +125,25 @@ export const OperationalProblem: React.FC = () => {
                   return (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#090D0F] border border-[#253039] flex items-center justify-between text-xs"
+                      className="p-3 rounded-xl bg-[#F9F7F3] border border-[#DFDFDD] flex items-center justify-between text-xs"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-6 h-6 rounded-full bg-[#171E24] flex items-center justify-center text-[#EF5B5B] font-bold">
+                        <div className="w-6 h-6 rounded-full bg-[#EF4444]/10 flex items-center justify-center text-[#EF4444] font-bold">
                           {idx + 1}
                         </div>
                         <div>
-                          <div className="font-bold text-[#F4F7F5]">{item.role}</div>
-                          <div className="text-[11px] text-[#A7B0AB]">{item.action}</div>
+                          <div className="font-bold text-[#2B2523]">{item.role}</div>
+                          <div className="text-[11px] text-[#69433C]">{item.action}</div>
                         </div>
                       </div>
-                      <Icon className="w-4 h-4 text-[#EF5B5B]/70" />
+                      <Icon className="w-4 h-4 text-[#EF4444]/70" />
                     </div>
                   );
                 })}
               </div>
 
               {/* Live Animated Notification Simulator */}
-              <div className="p-3.5 rounded-xl bg-[#090D0F] border border-[#EF5B5B]/40 text-xs relative min-h-[58px] flex items-center">
+              <div className="p-3.5 rounded-xl bg-[#F9F7F3] border border-[#EF4444]/40 text-xs relative min-h-[58px] flex items-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeNotification}
@@ -152,7 +151,7 @@ export const OperationalProblem: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="text-[#EF5B5B] font-semibold flex items-center gap-2"
+                    className="text-[#EF4444] font-semibold flex items-center gap-2"
                   >
                     <span>{notifications[activeNotification].text}</span>
                   </motion.div>
@@ -160,58 +159,58 @@ export const OperationalProblem: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-[#253039] text-xs text-[#EF5B5B] font-semibold flex items-center justify-between">
+            <div className="mt-8 pt-4 border-t border-[#DFDFDD] text-xs text-[#EF4444] font-semibold flex items-center justify-between">
               <span>Resultado: Atrasos, erros e perda de identidade da rede</span>
               <XCircle className="w-4 h-4" />
             </div>
           </div>
 
           {/* RIGHT: COM SENSOR MERCADO */}
-          <div className="rounded-2xl bg-[#12181D] border border-[#20D477]/40 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden card-glow group">
-            <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#20D477]/10 text-[#20D477] text-xs font-bold rounded-bl-xl border-l border-b border-[#20D477]/30 flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4" />
+          <div className="rounded-2xl bg-[#FFFFFF] border border-[#F59E0B]/50 p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden card-glow group shadow-sm">
+            <div className="absolute top-0 right-0 px-4 py-1.5 bg-[#F59E0B]/15 text-[#2B2523] text-xs font-black rounded-bl-xl border-l border-b border-[#F59E0B]/40 flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-[#F59E0B]" />
               COM SENSOR MERCADO (INFRAESTRUTURA)
             </div>
 
             <div className="space-y-6">
               <div className="flex items-center gap-3 pt-2">
-                <div className="p-3 rounded-xl bg-[#20D477]/10 text-[#20D477] border border-[#20D477]/30">
-                  <Zap className="w-6 h-6" />
+                <div className="p-3 rounded-xl bg-[#F59E0B]/15 text-[#2B2523] border border-[#F59E0B]/40">
+                  <Zap className="w-6 h-6 text-[#F59E0B]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#F4F7F5]">Governança + Autonomia</h3>
-                  <p className="text-xs text-[#A7B0AB]">Matriz padroniza, lojas adaptam e publicam em minutos</p>
+                  <h3 className="text-xl font-extrabold text-[#2B2523]">Governança + Autonomia</h3>
+                  <p className="text-xs text-[#69433C]">Matriz padroniza, lojas adaptam e publicam em minutos</p>
                 </div>
               </div>
 
               {/* Streamlined Workflow Diagram */}
               <div className="space-y-3">
-                <div className="p-4 rounded-xl bg-[#171E24] border border-[#20D477]/40 flex items-center justify-between text-xs">
+                <div className="p-4 rounded-xl bg-[#F9F7F3] border border-[#F59E0B]/40 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-[#20D477]/10 text-[#20D477]">
-                      <Building2 className="w-5 h-5" />
+                    <div className="p-2 rounded-lg bg-[#F59E0B]/15 text-[#2B2523]">
+                      <Building2 className="w-5 h-5 text-[#F59E0B]" />
                     </div>
                     <div>
-                      <div className="font-bold text-[#F4F7F5] text-sm">01. MATRIZ CENTRAL</div>
-                      <div className="text-[11px] text-[#A7B0AB]">Cria modelos, trava marcas e libera campanha</div>
+                      <div className="font-extrabold text-[#2B2523] text-sm">01. MATRIZ CENTRAL</div>
+                      <div className="text-[11px] text-[#69433C]">Cria modelos, trava marcas e libera campanha</div>
                     </div>
                   </div>
-                  <ShieldCheck className="w-5 h-5 text-[#20D477]" />
+                  <ShieldCheck className="w-5 h-5 text-[#F59E0B]" />
                 </div>
 
                 <div className="flex justify-center my-1">
-                  <div className="w-px h-6 bg-gradient-to-b from-[#20D477] to-transparent" />
+                  <div className="w-px h-6 bg-gradient-to-b from-[#F59E0B] to-transparent" />
                 </div>
 
                 <div className="grid grid-cols-3 gap-2">
                   {['LOJA 01', 'LOJA 02', 'LOJA 03'].map((loja, idx) => (
                     <div
                       key={idx}
-                      className="p-3 rounded-xl bg-[#090D0F] border border-[#20D477]/30 text-center flex flex-col items-center gap-1.5"
+                      className="p-3 rounded-xl bg-[#F9F7F3] border border-[#F59E0B]/30 text-center flex flex-col items-center gap-1.5"
                     >
-                      <Store className="w-4 h-4 text-[#20D477]" />
-                      <span className="font-bold text-[11px] text-[#F4F7F5]">{loja}</span>
-                      <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#20D477]/10 text-[#20D477] font-semibold">
+                      <Store className="w-4 h-4 text-[#F59E0B]" />
+                      <span className="font-bold text-[11px] text-[#2B2523]">{loja}</span>
+                      <span className="text-[9px] px-1.5 py-0.5 rounded bg-[#F59E0B]/20 text-[#2B2523] font-bold">
                         Adapta Preço
                       </span>
                     </div>
@@ -219,30 +218,30 @@ export const OperationalProblem: React.FC = () => {
                 </div>
 
                 <div className="flex justify-center my-1">
-                  <div className="w-px h-6 bg-gradient-to-b from-[#20D477] to-transparent" />
+                  <div className="w-px h-6 bg-gradient-to-b from-[#F59E0B] to-transparent" />
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#171E24] border border-[#20D477]/40 flex items-center justify-between text-xs">
+                <div className="p-4 rounded-xl bg-[#F9F7F3] border border-[#F59E0B]/40 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-[#20D477]/10 text-[#20D477]">
-                      <CheckCircle2 className="w-5 h-5" />
+                    <div className="p-2 rounded-lg bg-[#F59E0B]/15 text-[#2B2523]">
+                      <CheckCircle2 className="w-5 h-5 text-[#F59E0B]" />
                     </div>
                     <div>
-                      <div className="font-bold text-[#F4F7F5] text-sm">PUBLICAÇÃO INSTANTÂNEA</div>
-                      <div className="text-[11px] text-[#A7B0AB]">Encarte A4, WhatsApp, Feed, Stories & TVs de loja</div>
+                      <div className="font-extrabold text-[#2B2523] text-sm">PUBLICAÇÃO INSTANTÂNEA</div>
+                      <div className="text-[11px] text-[#69433C]">Encarte A4, WhatsApp, Feed, Stories & TVs de loja</div>
                     </div>
                   </div>
-                  <span className="font-bold text-[#20D477] text-xs">Pronto ✓</span>
+                  <span className="font-extrabold text-[#F59E0B] text-xs">Pronto ✓</span>
                 </div>
               </div>
             </div>
 
             {/* Bottom Highlights Message */}
-            <div className="mt-8 pt-4 border-t border-[#253039] text-xs text-[#F4F7F5] font-bold flex flex-wrap items-center justify-between gap-2">
-              <span className="text-[#20D477] uppercase tracking-wider text-[11px]">
+            <div className="mt-8 pt-4 border-t border-[#DFDFDD] text-xs text-[#2B2523] font-bold flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[#F59E0B] uppercase tracking-wider text-[11px]">
                 Menos fila. Mais controle. Mais velocidade.
               </span>
-              <span className="text-[#A7B0AB] font-normal">Tempo médio: 3 minutos</span>
+              <span className="text-[#69433C] font-semibold">Tempo médio: 3 minutos</span>
             </div>
           </div>
         </div>

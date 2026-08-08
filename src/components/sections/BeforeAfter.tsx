@@ -24,7 +24,7 @@ export const BeforeAfter: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-[#0D1215] border-t border-[#253039]/60 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-[#F4EDE2] border-t border-[#DFDFDD] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="TRANSFORMAÇÃO OPERACIONAL"
@@ -34,61 +34,61 @@ export const BeforeAfter: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12">
           {/* HOJE Card */}
-          <div className="rounded-2xl bg-[#12181D] border border-[#EF5B5B]/30 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+          <div className="rounded-2xl bg-[#FFFFFF] border border-[#EF4444]/30 p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-sm">
             <div className="space-y-4">
-              <div className="flex items-center gap-3 pb-4 border-b border-[#253039]">
-                <div className="p-2.5 rounded-xl bg-[#EF5B5B]/10 text-[#EF5B5B] border border-[#EF5B5B]/30">
+              <div className="flex items-center gap-3 pb-4 border-b border-[#DFDFDD]">
+                <div className="p-2.5 rounded-xl bg-[#EF4444]/10 text-[#EF4444] border border-[#EF4444]/30">
                   <XCircle className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-[#EF5B5B] uppercase tracking-wider">
+                  <span className="text-[10px] font-black text-[#EF4444] uppercase tracking-wider">
                     FLUXO TRADICIONAL
                   </span>
-                  <h3 className="text-xl font-extrabold text-[#F4F7F5]">HOJE (IMPROVISO)</h3>
+                  <h3 className="text-xl font-extrabold text-[#2B2523]">HOJE (IMPROVISO)</h3>
                 </div>
               </div>
 
               <div className="space-y-3">
                 {beforeList.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-xs text-[#A7B0AB]">
-                    <XCircle className="w-4 h-4 text-[#EF5B5B] shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-3 text-xs text-[#69433C] font-medium">
+                    <XCircle className="w-4 h-4 text-[#EF4444] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#253039] text-xs font-bold text-[#EF5B5B]">
+            <div className="pt-4 border-t border-[#DFDFDD] text-xs font-black text-[#EF4444]">
               Perda de tempo, atraso nas ofertas e ruído de marca.
             </div>
           </div>
 
           {/* COM SENSOR MERCADO Card */}
-          <div className="rounded-2xl bg-[#12181D] border border-[#20D477]/40 p-6 sm:p-8 flex flex-col justify-between space-y-6 card-glow">
+          <div className="rounded-2xl bg-[#FFFFFF] border border-[#F59E0B]/50 p-6 sm:p-8 flex flex-col justify-between space-y-6 shadow-sm card-glow">
             <div className="space-y-4">
-              <div className="flex items-center gap-3 pb-4 border-b border-[#253039]">
-                <div className="p-2.5 rounded-xl bg-[#20D477]/10 text-[#20D477] border border-[#20D477]/30">
-                  <CheckCircle2 className="w-6 h-6" />
+              <div className="flex items-center gap-3 pb-4 border-b border-[#DFDFDD]">
+                <div className="p-2.5 rounded-xl bg-[#F59E0B]/20 text-[#2B2523] border border-[#F59E0B]/40">
+                  <CheckCircle2 className="w-6 h-6 text-[#F59E0B]" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-[#20D477] uppercase tracking-wider">
+                  <span className="text-[10px] font-black text-[#F59E0B] uppercase tracking-wider">
                     NOVO PADRÃO ENTERPRISE
                   </span>
-                  <h3 className="text-xl font-extrabold text-[#F4F7F5]">COM SENSOR MERCADO</h3>
+                  <h3 className="text-xl font-extrabold text-[#2B2523]">COM SENSOR MERCADO</h3>
                 </div>
               </div>
 
               <div className="space-y-3">
                 {afterList.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-xs text-[#F4F7F5] font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-[#20D477] shrink-0 mt-0.5" />
+                  <div key={idx} className="flex items-start gap-3 text-xs text-[#2B2523] font-bold">
+                    <CheckCircle2 className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#253039] text-xs font-bold text-[#20D477] flex items-center justify-between">
+            <div className="pt-4 border-t border-[#DFDFDD] text-xs font-black text-[#F59E0B] flex items-center justify-between">
               <span>Processo padronizado, ágil e escalável para N lojas.</span>
               <ArrowRight className="w-4 h-4" />
             </div>
