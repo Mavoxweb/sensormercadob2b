@@ -343,15 +343,15 @@ export const FAQ_ITEMS: FAQItem[] = [
     answer: "Serve. Cria, publica e gera o arquivo pronto pra gráfica."
   },
   {
+    question: "Tem app?",
+    answer: "Tem. Sua rede pode ter um app onde o cliente vê as ofertas direto no celular."
+  },
+  {
     question: "Tem mensalidade?",
     answer: "Não é o modelo. É uma aquisição única. Suporte e manutenção ficam definidos no contrato."
   },
   {
     question: "A plataforma fica com a minha marca?",
     answer: "Fica. Nome, logo e cores são da sua rede."
-  },
-  {
-    question: "Tem suporte?",
-    answer: "Tem, e acessível. Você fala com gente de verdade, conforme combinado no contrato."
   }
 ];

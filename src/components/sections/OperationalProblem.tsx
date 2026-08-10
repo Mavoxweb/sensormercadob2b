@@ -37,13 +37,13 @@ export const OperationalProblem: React.FC = () => {
 
   const painPoints = [
     {
-      title: "Ofertas demorando para ir ao ar",
+      title: "Ofertas demorando pra ir ao ar",
       description: "A oportunidade passa enquanto a arte ainda está sendo produzida ou aprovada.",
       icon: Clock
     },
     {
-      title: "Cada unidade comunicando de um jeito",
-      description: "Cores, formatos e mensagens diferentes enfraquecem a identidade da rede.",
+      title: "Cada loja comunicando de um jeito",
+      description: "Cores, formatos e mensagens diferentes enfraquecem a marca da rede.",
       icon: Palette
     },
     {
@@ -52,8 +52,8 @@ export const OperationalProblem: React.FC = () => {
       icon: UserX
     },
     {
-      title: "Pouca velocidade para campanhas locais",
-      description: "As lojas conhecem sua região, mas não têm autonomia segura para agir rápido.",
+      title: "Pouca velocidade pras campanhas locais",
+      description: "As lojas conhecem sua região, mas não têm autonomia pra agir rápido.",
       icon: ZapOff
     }
   ];
@@ -63,8 +63,8 @@ export const OperationalProblem: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="O PROBLEMA"
-          title="Sua rede cresceu. A criação de encartes precisa acompanhar."
-          description="Quando cada campanha depende de pedidos, aprovações e ajustes manuais, as ofertas demoram, o padrão se perde e as unidades ficam presas a terceiros."
+          title="Sua rede cresceu. O jeito de anunciar continuou o mesmo."
+          description="Quando cada campanha depende de pedido, aprovação e ajuste manual, a oferta demora, a rede perde o padrão e a operação fica presa."
         />
 
         {/* 4 Pain Points Cards Grid from Copy */}

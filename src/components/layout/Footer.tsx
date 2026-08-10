@@ -9,6 +9,7 @@ export const Footer: React.FC = () => {
   const footerLinks = [
     { label: 'Produto', href: '#produto', isExternal: false },
     { label: 'Como funciona', href: '#como-funciona', isExternal: false },
+    { label: 'Seja Parceiro (Agências)', href: '/seja-parceiro-agencia', isExternal: false },
     { label: 'Demo On-line', href: 'https://www.sensormercado.com.br/demo', isExternal: true },
     { label: 'Demonstração', href: '#demonstracao', isExternal: false },
     { label: 'FAQ', href: '#faq', isExternal: false },

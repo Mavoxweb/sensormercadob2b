@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Sparkles, ExternalLink } from 'lucide-react';
+import { ArrowRight, Sparkles, Briefcase } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 
-export const FinalCTA: React.FC = () => {
-  const scrollTo = (id: string) => {
-    const el = document.querySelector(id);
+export const AgencyFinalCTA: React.FC = () => {
+  const scrollToForm = () => {
+    const el = document.querySelector('#seja-parceiro');
     if (el) {
       const top = el.getBoundingClientRect().top + window.pageYOffset - 90;
       window.scrollTo({ top, behavior: 'smooth' });
@@ -15,27 +15,27 @@ export const FinalCTA: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-[#F9F7F3] border-t border-[#DFDFDD] relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 bg-[#F9F7F3] border-t border-[#DFDFDD] relative overflow-hidden">
       {/* Background Radial Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#F59E0B20_0%,transparent_70%)] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         {/* Eyebrow */}
         <Badge variant="amber" className="py-1.5 px-4 text-xs tracking-widest uppercase font-black">
-          ÚLTIMO CONVITE
+          ÚLTIMO CONVITE PARA AGÊNCIAS
         </Badge>
 
         {/* Headline */}
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#2B2523] tracking-tight leading-tight">
-          Sua próxima oferta{' '}
+          Coloque tecnologia no seu portfólio{' '}
           <span className="text-[#F59E0B] block mt-1">
-            pode sair de um lugar só.
+            sem virar empresa de tech.
           </span>
         </h2>
 
         {/* Description */}
         <p className="text-base sm:text-xl text-[#69433C] font-medium leading-relaxed max-w-2xl mx-auto">
-          Teste o protótipo, veja o app ou agende uma demonstração pra ver a plataforma com a sua marca.
+          Vire parceiro e entregue pro seu cliente de varejo o que a concorrência ainda não tem.
         </p>
 
         {/* CTAs */}
@@ -43,35 +43,32 @@ export const FinalCTA: React.FC = () => {
           <Button
             variant="primary"
             size="lg"
-            onClick={() => scrollTo('#prototipo')}
+            onClick={scrollToForm}
             className="w-full sm:w-auto min-h-[52px] font-black text-sm"
-            leftIcon={<Sparkles className="w-5 h-5 text-[#2B2523]" />}
+            leftIcon={<Briefcase className="w-5 h-5 text-[#2B2523]" />}
           >
-            Testar o protótipo
+            Quero me tornar parceiro
           </Button>
 
           <Button
             variant="secondary"
             size="lg"
-            onClick={() => scrollTo('#app-da-rede')}
+            onClick={() => {
+              const el = document.querySelector('#prototipo');
+              if (el) {
+                const top = el.getBoundingClientRect().top + window.pageYOffset - 90;
+                window.scrollTo({ top, behavior: 'smooth' });
+              }
+            }}
             className="w-full sm:w-auto min-h-[52px]"
+            rightIcon={<Sparkles className="w-5 h-5 text-[#F59E0B]" />}
           >
-            Ver o app
-          </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => scrollTo('#demonstracao')}
-            className="w-full sm:w-auto min-h-[52px] border-[#F59E0B]/50 hover:bg-[#F59E0B]/10 text-[#2B2523] font-extrabold"
-            rightIcon={<ArrowRight className="w-5 h-5 text-[#F59E0B]" />}
-          >
-            Agendar demonstração
+            Testar o protótipo
           </Button>
         </div>
 
         <p className="text-xs text-[#69433C] pt-4 font-semibold">
-          Sensor Mercado — A plataforma da sua rede de supermercados.
+          Sensor Mercado — A plataforma de encartes e apps para o seu cliente supermercadista.
         </p>
       </div>
     </section>

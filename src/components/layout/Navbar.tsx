@@ -5,7 +5,11 @@ import { Menu, X, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { cn } from '@/lib/utils';
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  isAgencyPage?: boolean;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ isAgencyPage = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,13 +22,24 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const defaultNavLinks = [
     { label: 'Produto', href: '#produto' },
     { label: 'Como funciona', href: '#como-funciona' },
+    { label: 'App da rede', href: '#app-da-rede' },
     { label: 'Matriz + Unidades', href: '#matriz-unidades' },
     { label: 'Multiformato', href: '#multiformato' },
     { label: 'FAQ', href: '#faq' },
   ];
+
+  const agencyNavLinks = [
+    { label: 'Comissão 20%', href: '#comissao' },
+    { label: 'O que oferecemos', href: '#o-que-oferece' },
+    { label: 'App do Supermercado', href: '#app-supermercado' },
+    { label: 'Como funciona', href: '#como-funciona-agencia' },
+    { label: 'FAQ Agências', href: '#faq-agencia' },
+  ];
+
+  const navLinks = isAgencyPage ? agencyNavLinks : defaultNavLinks;
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -52,7 +67,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             className="flex items-center gap-2.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B] rounded-lg p-1"
           >
             <div className="w-8 h-8 rounded-lg bg-[#FFFFFF] border border-[#F59E0B]/50 flex items-center justify-center group-hover:border-[#F59E0B] transition-all shadow-sm">
@@ -63,7 +78,7 @@ export const Navbar: React.FC = () => {
                 sensor<span className="text-[#F59E0B]">mercado</span>
               </span>
               <span className="text-[10px] font-bold tracking-widest text-[#69433C] uppercase -mt-1">
-                Enterprise B2B
+                {isAgencyPage ? 'Programa de Agências' : 'Enterprise B2B'}
               </span>
             </div>
           </a>
@@ -91,17 +106,17 @@ export const Navbar: React.FC = () => {
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold bg-[#F59E0B]/15 text-[#2B2523] border border-[#F59E0B]/40 hover:bg-[#F59E0B] transition-all shadow-sm active:scale-95"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
-              <span>Acessar Demo Live</span>
+              <span>{isAgencyPage ? 'Testar Protótipo' : 'Acessar Demo Live'}</span>
               <ExternalLink className="w-3 h-3 text-[#69433C]" />
             </a>
 
             <Button
               variant="primary"
               size="sm"
-              onClick={(e: any) => handleScrollTo(e, '#demonstracao')}
+              onClick={(e: any) => handleScrollTo(e, isAgencyPage ? '#seja-parceiro' : '#demonstracao')}
               rightIcon={<ArrowRight className="w-4 h-4" />}
             >
-              Agendar demonstração
+              {isAgencyPage ? 'Quero me tornar parceiro' : 'Agendar demonstração'}
             </Button>
           </div>
 

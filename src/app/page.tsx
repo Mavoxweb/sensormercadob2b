@@ -7,6 +7,7 @@ import { InteractiveDemo } from '@/components/sections/InteractiveDemo';
 import { MatrixUnits } from '@/components/sections/MatrixUnits';
 import { ProductWorkflow } from '@/components/sections/ProductWorkflow';
 import { MultiFormat } from '@/components/sections/MultiFormat';
+import { AppFeature } from '@/components/sections/AppFeature';
 import { ScaleNetwork } from '@/components/sections/ScaleNetwork';
 import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { EnterpriseOffer } from '@/components/sections/EnterpriseOffer';
@@ -27,6 +28,7 @@ export default function Home() {
         <MatrixUnits />
         <ProductWorkflow />
         <MultiFormat />
+        <AppFeature />
         <ScaleNetwork />
         <BeforeAfter />
         <EnterpriseOffer />

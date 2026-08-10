@@ -59,7 +59,7 @@ export const MultiFormat: React.FC = () => {
     <section className="py-16 sm:py-20 lg:py-32 bg-[#F4EDE2] border-t border-[#DFDFDD] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="BENEFÍCIOS"
+          eyebrow="O QUE A SUA REDE GANHA"
           title="Mais rápido. Menos trabalho. Uma marca só."
           description="A plataforma organiza a produção dos encartes para que a rede responda mais rápido ao mercado sem abrir mão de controle e identidade."
         />
