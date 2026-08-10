@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
           <p>© {currentYear} Sensor Mercado. Todos os direitos reservados.</p>
           <div className="flex items-center gap-2 font-semibold">
             <span className="w-2 h-2 rounded-full bg-[#F59E0B]"></span>
-            <span>Operação Vitalícia Enterprise • Governança Matriz & Unidades</span>
+            <span>Operação Vitalícia Enterprise • Administração Matriz & Unidades</span>
           </div>
         </div>
       </div>

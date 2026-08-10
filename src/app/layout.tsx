@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sensor Mercado | Governança Central & Autonomia Local para Supermercados',
+    title: 'Sensor Mercado | Administração Central & Autonomia Local para Supermercados',
     description:
       'Plataforma personalizada para redes de supermercados criarem e distribuírem campanhas sem perder o padrão da marca.',
   },

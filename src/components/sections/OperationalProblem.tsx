@@ -178,7 +178,7 @@ export const OperationalProblem: React.FC = () => {
                   <Zap className="w-6 h-6 text-[#F59E0B]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-extrabold text-[#2B2523]">Governança + Autonomia</h3>
+                  <h3 className="text-xl font-extrabold text-[#2B2523]">Administração + Autonomia</h3>
                   <p className="text-xs text-[#69433C]">Matriz padroniza, lojas adaptam e publicam em minutos</p>
                 </div>
               </div>

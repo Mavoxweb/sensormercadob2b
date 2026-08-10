@@ -49,7 +49,7 @@ export const ScaleNetwork: React.FC = () => {
               <Building2 className="w-8 h-8 text-[#2B2523]" />
             </div>
             <span className="font-black text-sm text-[#2B2523]">MATRIZ CENTRAL</span>
-            <span className="text-[10px] text-[#F59E0B] font-extrabold">1 Ponto de Governança</span>
+            <span className="text-[10px] text-[#F59E0B] font-extrabold">1 Ponto de Administração</span>
           </div>
 
           {/* Central Connecting Line */}
