@@ -1,7 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Smartphone, Bell, Gift, Sparkles, CheckCircle2, DollarSign, ExternalLink } from 'lucide-react';
+import { motion } from 'motion/react';
+import { 
+  Smartphone, 
+  Bell, 
+  Gift, 
+  Sparkles, 
+  CheckCircle2, 
+  DollarSign, 
+  ExternalLink,
+  ShoppingBag,
+  Star,
+  Zap,
+  Tag,
+  Share2,
+  TrendingUp,
+  Store,
+  Briefcase
+} from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
@@ -19,6 +36,9 @@ export const AgencyAppExtension: React.FC = () => {
 
   return (
     <section id="app-supermercado" className="py-16 sm:py-20 lg:py-32 bg-[#F9F7F3] border-t border-[#DFDFDD] relative overflow-hidden">
+      {/* Background Radial Decorator */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#F59E0B]/10 rounded-full blur-3xl pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="NOVO PRODUTO NO PORTFÓLIO DA AGÊNCIA"
@@ -62,6 +82,16 @@ export const AgencyAppExtension: React.FC = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-start gap-3 pt-3 border-t border-[#DFDFDD]/60">
+                <Briefcase className="w-5 h-5 text-[#F59E0B] shrink-0 mt-1" />
+                <div className="space-y-1">
+                  <h4 className="text-base font-extrabold text-[#2B2523]">Gestão de Mídia B2B (Indústria)</h4>
+                  <p className="text-xs text-[#69433C] leading-relaxed">
+                    Sua agência pode gerenciar o espaço publicitário no app do supermercado e vender banners para grandes marcas e fornecedores.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="pt-2 flex flex-col sm:flex-row gap-4">
@@ -76,90 +106,195 @@ export const AgencyAppExtension: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Smartphone Mockup Simulator */}
+          {/* Right Column: Premium High-Fidelity Smartphone Mockup */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-[320px] bg-[#1F1917] p-4 rounded-[40px] border-4 border-[#3D3330] shadow-2xl space-y-4 relative">
-              {/* Phone Camera Notch */}
-              <div className="w-28 h-4 bg-[#3D3330] rounded-full mx-auto" />
+            <div className="w-full max-w-[340px] sm:max-w-[360px] bg-[#2B2523] p-4 rounded-[42px] shadow-2xl border-4 border-[#DFDFDD] relative">
+              
+              {/* Phone Speaker & Notch */}
+              <div className="w-32 h-4 bg-[#2B2523] mx-auto rounded-b-xl flex items-center justify-center gap-2 mb-2 z-20">
+                <div className="w-10 h-1 bg-[#8F817A]/50 rounded-full" />
+                <div className="w-2 h-2 bg-[#8F817A]/50 rounded-full" />
+              </div>
 
-              {/* App Screen Frame */}
-              <div className="bg-[#F9F7F3] rounded-[28px] overflow-hidden border border-[#DFDFDD] p-4 space-y-4 text-left">
-                {/* Header */}
-                <div className="flex items-center justify-between border-b border-[#DFDFDD] pb-3">
+              {/* Phone Screen Container */}
+              <div className="bg-[#F9F7F3] rounded-[30px] overflow-hidden border border-[#DFDFDD] shadow-inner text-[#2B2523]">
+                
+                {/* App Status Header */}
+                <div className="bg-[#FFFFFF] p-3.5 border-b border-[#DFDFDD] flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-md bg-[#F59E0B] flex items-center justify-center text-[#2B2523] font-black text-xs">
-                      S
+                    <div className="w-7 h-7 rounded-lg bg-[#F59E0B] flex items-center justify-center text-[#2B2523] font-black text-xs shadow-sm">
+                      SM
                     </div>
-                    <span className="text-xs font-black text-[#2B2523]">Supermercado da Rede</span>
+                    <div>
+                      <div className="text-xs font-black tracking-tight text-[#2B2523]">SUPERMERCADO DA REDE</div>
+                      <div className="text-[9px] font-bold text-[#F59E0B] uppercase">App com a Marca do Cliente</div>
+                    </div>
                   </div>
-                  <span className="text-[9px] font-extrabold px-2 py-0.5 rounded-full bg-[#F59E0B]/20 text-[#2B2523]">
-                    Seu App
-                  </span>
+                  <div className="p-1.5 rounded-full bg-[#F9F7F3] border border-[#DFDFDD] text-[#69433C] relative">
+                    <Bell className="w-3.5 h-3.5" />
+                    <span className="w-2 h-2 rounded-full bg-[#F59E0B] absolute top-0 right-0 border border-[#FFFFFF]" />
+                  </div>
                 </div>
 
-                {/* Tab Switcher */}
-                <div className="grid grid-cols-3 gap-1 bg-[#F4EDE2] p-1 rounded-xl text-[10px] font-bold text-center">
+                {/* App Screen Interactive Tabs */}
+                <div className="flex border-b border-[#DFDFDD] bg-[#FFFFFF] text-[10px] font-bold">
                   <button
                     onClick={() => setActiveTab('encarte')}
-                    className={`py-1 rounded-lg transition-all ${activeTab === 'encarte' ? 'bg-[#FFFFFF] text-[#2B2523] shadow-sm font-extrabold' : 'text-[#69433C]'}`}
+                    className={`flex-1 py-2.5 text-center transition-colors border-b-2 ${
+                      activeTab === 'encarte'
+                        ? 'border-[#F59E0B] text-[#F59E0B] font-extrabold bg-[#F59E0B]/5'
+                        : 'border-transparent text-[#69433C]'
+                    }`}
                   >
-                    Encarte
+                    Encarte Digital
                   </button>
                   <button
                     onClick={() => setActiveTab('patrocinio')}
-                    className={`py-1 rounded-lg transition-all ${activeTab === 'patrocinio' ? 'bg-[#FFFFFF] text-[#2B2523] shadow-sm font-extrabold' : 'text-[#69433C]'}`}
+                    className={`flex-1 py-2.5 text-center transition-colors border-b-2 ${
+                      activeTab === 'patrocinio'
+                        ? 'border-[#F59E0B] text-[#F59E0B] font-extrabold bg-[#F59E0B]/5'
+                        : 'border-transparent text-[#69433C]'
+                    }`}
                   >
-                    B2B Mídia
+                    Mídia B2B
                   </button>
                   <button
                     onClick={() => setActiveTab('push')}
-                    className={`py-1 rounded-lg transition-all ${activeTab === 'push' ? 'bg-[#FFFFFF] text-[#2B2523] shadow-sm font-extrabold' : 'text-[#69433C]'}`}
+                    className={`flex-1 py-2.5 text-center transition-colors border-b-2 ${
+                      activeTab === 'push'
+                        ? 'border-[#F59E0B] text-[#F59E0B] font-extrabold bg-[#F59E0B]/5'
+                        : 'border-transparent text-[#69433C]'
+                    }`}
                   >
-                    Push
+                    Push Notificação
                   </button>
                 </div>
 
-                {/* Dynamic Screen Content */}
-                {activeTab === 'encarte' && (
-                  <div className="space-y-2 animate-in fade-in duration-200">
-                    <div className="p-3 bg-[#FFFFFF] rounded-xl border border-[#DFDFDD] space-y-2">
-                      <div className="flex justify-between items-center text-[10px] font-black text-[#F59E0B]">
-                        <span>OFERTAS DA SEMANA</span>
-                        <span>PDF / SOCIAL</span>
+                {/* App Screen Body Content */}
+                <div className="p-3.5 space-y-3 min-h-[360px] bg-[#F9F7F3]">
+                  
+                  {activeTab === 'encarte' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="space-y-3"
+                    >
+                      {/* Banner Encarte Ativo */}
+                      <div className="p-3 rounded-xl bg-gradient-to-r from-[#F59E0B] to-[#E89005] text-[#2B2523] shadow-sm">
+                        <div className="flex items-center justify-between text-[9px] font-black uppercase opacity-90">
+                          <span>Ofertas da Semana</span>
+                          <span className="bg-[#FFFFFF]/30 px-1.5 py-0.5 rounded">Válido até domingo</span>
+                        </div>
+                        <div className="text-xs font-black mt-1 uppercase">Encarte Especial da Rede</div>
+                        <div className="text-[9px] font-extrabold opacity-90 mt-0.5">38 ofertas atualizadas na sua loja</div>
                       </div>
-                      <div className="h-20 bg-[#F4EDE2] rounded-lg border border-dashed border-[#DFDFDD] flex items-center justify-center text-[10px] text-[#69433C] font-bold">
-                        Encarte Digital Interativo
+
+                      {/* Encarte Digital Cards Mock */}
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="p-2 rounded-lg bg-[#FFFFFF] border border-[#DFDFDD] text-center space-y-1 shadow-xs">
+                          <div className="h-14 bg-[#F4EDE2] rounded flex items-center justify-center text-[9px] font-extrabold text-[#69433C]">
+                            Cerveja Heineken 350ml
+                          </div>
+                          <div className="text-[9px] font-extrabold text-[#2B2523] truncate">Heineken Lta 350ml</div>
+                          <div className="text-xs font-black text-[#F59E0B]">R$ 4,19</div>
+                        </div>
+
+                        <div className="p-2 rounded-lg bg-[#FFFFFF] border border-[#DFDFDD] text-center space-y-1 shadow-xs">
+                          <div className="h-14 bg-[#F4EDE2] rounded flex items-center justify-center text-[9px] font-extrabold text-[#69433C]">
+                            Picanha Friboi kg
+                          </div>
+                          <div className="text-[9px] font-extrabold text-[#2B2523] truncate">Picanha Friboi</div>
+                          <div className="text-xs font-black text-[#F59E0B]">R$ 49,90</div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                )}
 
-                {activeTab === 'patrocinio' && (
-                  <div className="space-y-2 animate-in fade-in duration-200">
-                    <div className="p-3 bg-[#FFFFFF] rounded-xl border border-[#F59E0B]/50 space-y-1.5">
-                      <span className="text-[9px] font-black text-[#F59E0B] uppercase">PATROCINADO • INDÚSTRIA</span>
-                      <p className="text-[11px] font-extrabold text-[#2B2523]">Detergente Ypê 500ml</p>
-                      <p className="text-[10px] text-[#69433C]">Leve 3 por R$ 1,99 cada no App!</p>
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === 'push' && (
-                  <div className="space-y-2 animate-in fade-in duration-200">
-                    <div className="p-2.5 bg-[#FFFFFF] rounded-xl border border-[#DFDFDD] flex items-start gap-2 shadow-sm">
-                      <Bell className="w-4 h-4 text-[#F59E0B] shrink-0 mt-0.5" />
-                      <div>
-                        <p className="text-[10px] font-black text-[#2B2523]">Alerta de Oferta Relâmpago!</p>
-                        <p className="text-[9px] text-[#69433C]">Picanha Friboi com 30% OFF hoje até às 20h na loja Matriz.</p>
+                      {/* Store Selector Pill */}
+                      <div className="p-2 rounded-xl bg-[#FFFFFF] border border-[#DFDFDD] flex items-center justify-between text-[9px] shadow-xs">
+                        <span className="font-extrabold text-[#2B2523]">📍 Loja: Loja 01 - Matriz</span>
+                        <span className="text-[#F59E0B] font-bold">Alterar</span>
                       </div>
-                    </div>
-                  </div>
-                )}
+                    </motion.div>
+                  )}
 
-                <div className="p-2 bg-[#F59E0B]/10 rounded-xl text-center text-[10px] font-black text-[#2B2523]">
-                  Marca da Rede • 20% comissão pra Agência
+                  {activeTab === 'patrocinio' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="space-y-3"
+                    >
+                      <div className="p-3 rounded-xl bg-[#FFFFFF] border border-[#F59E0B]/40 space-y-2 shadow-sm">
+                        <div className="flex items-center justify-between text-[9px] font-black text-[#F59E0B] uppercase">
+                          <span className="flex items-center gap-1">
+                            <Star className="w-3 h-3 fill-current" />
+                            PATROCINADO • INDÚSTRIA
+                          </span>
+                          <span className="bg-[#F59E0B]/15 px-1.5 py-0.5 rounded text-[8px]">Mídia Agência</span>
+                        </div>
+                        <div className="p-3 rounded-lg bg-[#F4EDE2] border border-[#DFDFDD] text-center space-y-1">
+                          <div className="text-xs font-black text-[#2B2523]">Banner Nestlé / Ambev</div>
+                          <div className="text-[9px] text-[#69433C]">Espaço comercializado pela sua agência direto para grandes marcas.</div>
+                        </div>
+                      </div>
+
+                      <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#DFDFDD] space-y-1">
+                        <div className="text-[10px] font-extrabold text-[#2B2523]">Monetização Dupla</div>
+                        <p className="text-[9px] text-[#69433C] leading-relaxed">
+                          Sua agência ganha 20% na venda do app e ainda cobra taxa de gestão de mídia das marcas parceiras.
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {activeTab === 'push' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="space-y-2.5"
+                    >
+                      <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#F59E0B]/50 flex items-start gap-2 shadow-sm">
+                        <div className="p-1.5 rounded-lg bg-[#F59E0B]/20 text-[#F59E0B] shrink-0 mt-0.5">
+                          <Zap className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <div className="text-[10px] font-black text-[#2B2523]">🔥 Oferta Relâmpago no App!</div>
+                          <div className="text-[9px] text-[#69433C]">File Mignon Friboi com 30% OFF até as 20h. Válido em toda a rede.</div>
+                        </div>
+                      </div>
+
+                      <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#DFDFDD] flex items-start gap-2">
+                        <div className="p-1.5 rounded-lg bg-[#F4EDE2] text-[#69433C] shrink-0 mt-0.5">
+                          <Tag className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <div className="text-[10px] font-extrabold text-[#2B2523]">Feira do Hortifrúti na Quarta</div>
+                          <div className="text-[9px] text-[#69433C]">Frutas e verduras frescas com preço especial no aplicativo.</div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+
                 </div>
+
+                {/* App Bottom Navigation Bar Mock */}
+                <div className="bg-[#FFFFFF] border-t border-[#DFDFDD] p-2 flex items-center justify-around text-[9px] font-bold text-[#69433C]">
+                  <div className="flex flex-col items-center gap-0.5 text-[#F59E0B] font-extrabold">
+                    <ShoppingBag className="w-4 h-4" />
+                    <span>Ofertas</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5">
+                    <Store className="w-4 h-4" />
+                    <span>Lojas</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Minha Rede</span>
+                  </div>
+                </div>
+
               </div>
+
+              {/* Phone Home Bar */}
+              <div className="w-24 h-1 bg-[#8F817A]/50 mx-auto rounded-full mt-3" />
             </div>
           </div>
 
