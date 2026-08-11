@@ -73,7 +73,7 @@ export const AppFeature: React.FC = () => {
         <SectionHeading
           eyebrow="O APP DA SUA REDE"
           title="Sua rede também no bolso do cliente."
-          description="Além do encarte, sua rede ganha um app onde o cliente vê as suas ofertas todo dia, direto no celular. O que o app faz pela sua rede:"
+          description="Além do encarte, sua pode ter um app onde o cliente vê as suas ofertas todo dia, direto no celular. O que o app faz pela sua rede:"
         />
 
         {/* Main Content Grid: Left App Features & Right Interactive Phone Mockup */}

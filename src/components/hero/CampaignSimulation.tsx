@@ -31,7 +31,7 @@ export const CAMPAIGN_PRODUCTS: ProductItem[] = [
     price: 'R$ 24,90',
     originalPrice: 'R$ 31,90',
     badge: 'OFERTAÇO',
-    image: 'https://images.unsplash.com/photo-1586201375761-83865001e8ac?auto=format&fit=crop&w=400&q=80',
+    image: '/tiojoao-fb.webp',
     status: 'Validado',
   },
   {
