@@ -1,12 +1,15 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, CheckCircle, ExternalLink } from 'lucide-react';
+import { motion, useReducedMotion } from 'motion/react';
+import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
-import { HeroProductDemo } from './HeroProductDemo';
+import { HeroProductMockup } from '../hero/HeroProductMockup';
 
 export const Hero: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   const scrollTo = (id: string) => {
     const el = document.querySelector(id);
     if (el) {
@@ -15,82 +18,118 @@ export const Hero: React.FC = () => {
     }
   };
 
+  const fadeUp = {
+    initial: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
-    <section className="relative pt-28 sm:pt-40 pb-16 lg:pb-28 overflow-hidden bg-[#F9F7F3]">
+    <section className="relative pt-28 sm:pt-36 pb-12 lg:pb-24 overflow-hidden bg-[#F9F7F3]">
       {/* Background Radial Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] hero-glow pointer-events-none opacity-80" />
-      
+      <div
+        className="absolute top-0 left-0 right-0 h-[600px] pointer-events-none"
+        aria-hidden="true"
+      >
+        <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-[#F59E0B]/8 blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-[#69433C]/5 blur-3xl" />
+      </div>
+
       {/* Subtle Grid Background Pattern */}
-      <div 
-        className="absolute inset-0 bg-[linear-gradient(to_right,#DFDFDD80_1px,transparent_1px),linear-gradient(to_bottom,#DFDFDD80_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" 
+      <div
+        className="absolute inset-0 bg-[linear-gradient(to_right,#DFDFDD60_1px,transparent_1px),linear-gradient(to_bottom,#DFDFDD60_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,#000_60%,transparent_100%)] pointer-events-none"
+        aria-hidden="true"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
-          {/* Eyebrow */}
-          <Badge variant="amber" className="py-1.5 px-4 text-xs tracking-widest uppercase">
-            PARA REDES DE VAREJO DE ALIMENTO COM 5 LOJAS OU MAIS
-          </Badge>
+        {/* Two-column Hero Grid: Copy Left, Mockup Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 xl:gap-16 items-center">
 
-          {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#2B2523] tracking-tight leading-[1.1] sm:leading-[1.08] break-words">
-            Pare de montar encarte loja por loja.{' '}
-            <span className="block text-[#F59E0B] mt-1 sm:mt-2">
-              Faça tudo de um lugar só.
-            </span>
-          </h1>
+          {/* ─── LEFT: Copy Column ─── */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
 
-          {/* Description */}
-          <p className="text-base sm:text-xl text-[#69433C] font-normal leading-relaxed max-w-3xl">
-            Uma plataforma só sua: você cria a oferta uma vez e ela vai pra rede inteira.
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4 w-full sm:w-auto">
-            {/* Primary Action: Testar o protótipo */}
-            <Button
-              variant="primary"
-              size="lg"
-              className="w-full sm:w-auto min-h-[52px] font-black text-sm"
-              onClick={() => scrollTo('#prototipo')}
-              leftIcon={<Sparkles className="w-5 h-5 text-[#2B2523]" />}
+            {/* Eyebrow */}
+            <motion.div
+              {...fadeUp}
+              transition={{ duration: 0.5, delay: 0.05 }}
             >
-              Testar o protótipo
-            </Button>
+              <Badge variant="amber" className="py-1.5 px-4 text-xs tracking-widest uppercase">
+                PARA REDES DE VAREJO DE ALIMENTO COM 5 LOJAS OU MAIS
+              </Badge>
+            </motion.div>
 
-            {/* Secondary Action: Ver o app */}
-            <Button
-              variant="secondary"
-              size="lg"
-              className="w-full sm:w-auto min-h-[52px]"
-              onClick={() => scrollTo('#app-da-rede')}
+            {/* Main Headline */}
+            <motion.h1
+              {...fadeUp}
+              transition={{ duration: 0.55, delay: 0.1 }}
+              className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#2B2523] tracking-tight leading-[1.08] break-words"
             >
-              Ver o app
-            </Button>
+              Pare de montar encarte loja por loja.{' '}
+              <span className="block text-[#F59E0B] mt-1 sm:mt-2">
+                Faça tudo de um lugar só.
+              </span>
+            </motion.h1>
 
-            {/* Tertiary Action: Agendar demonstração */}
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto min-h-[52px] border-[#F59E0B]/50 hover:bg-[#F59E0B]/10 text-[#2B2523] font-extrabold"
-              onClick={() => scrollTo('#demonstracao')}
-              rightIcon={<ArrowRight className="w-5 h-5 text-[#F59E0B]" />}
+            {/* Description */}
+            <motion.p
+              {...fadeUp}
+              transition={{ duration: 0.55, delay: 0.15 }}
+              className="text-base sm:text-xl text-[#69433C] font-normal leading-relaxed max-w-lg"
             >
-              Agendar demonstração
-            </Button>
+              Uma plataforma só sua: você cria a oferta uma vez e ela vai pra rede inteira.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              {...fadeUp}
+              transition={{ duration: 0.55, delay: 0.2 }}
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2.5 pt-2 w-full"
+            >
+              {/* Primary Action */}
+              <Button
+                variant="primary"
+                size="md"
+                className="w-full sm:w-auto min-h-[44px] font-black text-sm"
+                onClick={() => scrollTo('#prototipo')}
+                leftIcon={<Sparkles className="w-4 h-4 text-[#2B2523]" />}
+              >
+                Testar o protótipo
+              </Button>
+
+              {/* Tertiary Action */}
+              <Button
+                variant="outline"
+                size="md"
+                className="w-full sm:w-auto min-h-[44px] border-[#F59E0B]/50 hover:bg-[#F59E0B]/10 text-[#2B2523] font-extrabold"
+                onClick={() => scrollTo('#demonstracao')}
+                rightIcon={<ArrowRight className="w-4 h-4 text-[#F59E0B]" />}
+              >
+                Agendar demonstração
+              </Button>
+            </motion.div>
+
+            {/* Microcopy */}
+            <motion.div
+              {...fadeUp}
+              transition={{ duration: 0.55, delay: 0.25 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 text-xs font-bold text-[#69433C]"
+            >
+              <span className="flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
+                Teste em menos de 1 minuto, sem cadastro.
+              </span>
+            </motion.div>
           </div>
 
-          {/* Microcopy: Teste em menos de 1 minuto, sem cadastro. */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs font-bold text-[#69433C]">
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
-              Teste em menos de 1 minuto, sem cadastro.
-            </span>
-          </div>
+          {/* ─── RIGHT: Product Mockup Column ─── */}
+          <motion.div
+            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="w-full lg:flex lg:justify-center lg:items-center"
+          >
+            <HeroProductMockup />
+          </motion.div>
         </div>
-
-        {/* Sophisticated Interactive Product Demo Mockup */}
-        <HeroProductDemo />
       </div>
     </section>
   );
