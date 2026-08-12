@@ -10,7 +10,6 @@ import { MultiFormat } from '@/components/sections/MultiFormat';
 import { AppFeature } from '@/components/sections/AppFeature';
 import { PrintToDigital } from '@/components/sections/PrintToDigital';
 import { ScaleNetwork } from '@/components/sections/ScaleNetwork';
-import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { EnterpriseOffer } from '@/components/sections/EnterpriseOffer';
 import { DemoForm } from '@/components/sections/DemoForm';
 import { FAQ } from '@/components/sections/FAQ';
@@ -27,12 +26,11 @@ export default function Home() {
         <MultiFormat />
         <ProductWorkflow />
         <MatrixUnits />
-        <OperationalProblem />
         <InteractiveDemo />
+        <OperationalProblem />
         <AppFeature />
         <PrintToDigital />
         <ScaleNetwork />
-        <BeforeAfter />
         <EnterpriseOffer />
         <DemoForm />
         <FAQ />

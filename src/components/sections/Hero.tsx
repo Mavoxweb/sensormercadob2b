@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
-import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, Zap, Clock, CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
 import { HeroProductMockup } from '../hero/HeroProductMockup';
@@ -107,16 +107,51 @@ export const Hero: React.FC = () => {
               </Button>
             </motion.div>
 
-            {/* Microcopy */}
+            {/* Advantages Highlights Grid */}
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.55, delay: 0.25 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-6 text-xs font-bold text-[#69433C]"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-3 w-full border-t border-[#DFDFDD]/60"
             >
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#F59E0B]" />
-                Teste em menos de 1 minuto, sem cadastro.
-              </span>
+              <div className="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs p-2.5 rounded-xl border border-[#EBE7DF] shadow-xs">
+                <div className="p-1.5 rounded-lg bg-[#F59E0B]/15 text-[#F59E0B] shrink-0">
+                  <Zap className="w-4 h-4" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs font-bold text-[#2B2523] leading-tight">Agilidade Total</p>
+                  <p className="text-[11px] text-[#69433C] leading-tight">Campanhas em minutos</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs p-2.5 rounded-xl border border-[#EBE7DF] shadow-xs">
+                <div className="p-1.5 rounded-lg bg-[#F59E0B]/15 text-[#F59E0B] shrink-0">
+                  <ShieldCheck className="w-4 h-4" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs font-bold text-[#2B2523] leading-tight">100% Padrão Visual</p>
+                  <p className="text-[11px] text-[#69433C] leading-tight">Controle da matriz</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5 bg-white/80 backdrop-blur-xs p-2.5 rounded-xl border border-[#EBE7DF] shadow-xs">
+                <div className="p-1.5 rounded-lg bg-[#F59E0B]/15 text-[#F59E0B] shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs font-bold text-[#2B2523] leading-tight">Escala sem Gargalo</p>
+                  <p className="text-[11px] text-[#69433C] leading-tight">De 5 a 50+ lojas</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Microcopy */}
+            <motion.div
+              {...fadeUp}
+              transition={{ duration: 0.55, delay: 0.3 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 text-xs font-bold text-[#69433C] pt-1"
+            >
+              <CheckCircle2 className="w-4 h-4 text-[#F59E0B] shrink-0" />
+              <span>Teste em menos de 1 minuto, sem cadastro e sem compromisso.</span>
             </motion.div>
           </div>
 
