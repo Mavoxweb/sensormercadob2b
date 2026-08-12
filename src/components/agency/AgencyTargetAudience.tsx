@@ -42,8 +42,8 @@ export const AgencyTargetAudience: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="PERFIL DE PARCEIRO"
-          title="Feita pra agência que atende varejo de alimento."
-          description="Se a sua agência atende empresas do setor alimentar, a Senso Mercado encaixa perfeitamente no seu portfólio de serviços."
+          title="Feita pra agência que atende varejo."
+          description="Se a sua agência atende empresas do varejo, a Sensor Mercado encaixa perfeitamente no seu portfólio de serviços."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">

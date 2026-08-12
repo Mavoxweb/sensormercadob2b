@@ -132,11 +132,19 @@ export const HeroProductMockup: React.FC = () => {
 
         {/* Central Smartphone — always visible */}
         <motion.div
-          className="z-10 w-[78%] sm:w-[82%] lg:w-[75%] max-w-[340px]"
+          className="z-10 w-[78%] sm:w-[82%] lg:w-[75%] max-w-[340px] relative"
           animate={{ x: phoneX, y: phoneY }}
           transition={{ type: 'spring', stiffness: 180, damping: 22 }}
         >
           <MobileAppMockup currentState={currentState} stateIndex={stateIndex} />
+
+          {/* Connection Badge: Gerencie tudo na palma da sua mão */}
+          <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 z-40 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#DFDFDD] shadow-lg flex items-center gap-2 pointer-events-none transition-transform hover:scale-105">
+            <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse shrink-0" />
+            <span className="text-[11px] sm:text-xs font-black text-[#69433C] tracking-tight whitespace-nowrap">
+              Gerencie tudo na palma da sua mão
+            </span>
+          </div>
         </motion.div>
       </div>
 

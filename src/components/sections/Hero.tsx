@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.05 }}
             >
               <Badge variant="amber" className="py-1.5 px-4 text-xs tracking-widest uppercase">
-                PARA REDES DE VAREJO DE ALIMENTO COM 5 LOJAS OU MAIS
+                PARA REDES DE VAREJO COM 5 LOJAS OU MAIS
               </Badge>
             </motion.div>
 
@@ -63,9 +63,9 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.55, delay: 0.1 }}
               className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-[#2B2523] tracking-tight leading-[1.08] break-words"
             >
-              Pare de montar encarte loja por loja.{' '}
+              Sua rede cresceu.{' '}
               <span className="block text-[#F59E0B] mt-1 sm:mt-2">
-                Faça tudo de um lugar só.
+                O jeito de anunciar continuou o mesmo.
               </span>
             </motion.h1>
 
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
               transition={{ duration: 0.55, delay: 0.15 }}
               className="text-base sm:text-xl text-[#69433C] font-normal leading-relaxed max-w-lg"
             >
-              Uma plataforma só sua: você cria a oferta uma vez e ela vai pra rede inteira.
+              Quando cada campanha depende de pedido, aprovação e ajuste manual, a oferta demora, a rede perde o padrão e a operação fica presa.
             </motion.p>
 
             {/* CTAs */}

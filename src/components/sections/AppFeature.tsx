@@ -57,11 +57,6 @@ export const AppFeature: React.FC = () => {
       desc: 'Reduza drasticamente o gasto com impressão física direcionando clientes para a versão digital.',
       icon: FileText,
     },
-    {
-      title: 'Integração com app existente',
-      desc: 'Já tem app? A gente integra a funcionalidade de encarte digital no aplicativo que sua rede já usa.',
-      icon: Layers,
-    },
   ];
 
   return (
@@ -72,8 +67,8 @@ export const AppFeature: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="O APP DA SUA REDE"
-          title="Sua rede também no bolso do cliente."
-          description="Além do encarte, sua pode ter um app onde o cliente vê as suas ofertas todo dia, direto no celular. O que o app faz pela sua rede:"
+          title="Além do encarte, sua rede pode ter um app onde o cliente vê suas ofertas todo dia, direto no celular."
+          description="O que o app faz pela sua rede:"
         />
 
         {/* Main Content Grid: Left App Features & Right Interactive Phone Mockup */}

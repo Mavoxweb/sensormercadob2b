@@ -76,7 +76,7 @@ export const AgencyPartnerForm: React.FC = () => {
               {/* Clientes Varejo Alimentar */}
               <div className="space-y-2">
                 <label className="block text-xs font-bold uppercase tracking-wider text-[#2B2523]">
-                  Quantos clientes de varejo de alimento sua agência atende? *
+                  Quantos clientes de varejo sua agência atende? *
                 </label>
                 <select
                   value={formData.retailClientsCount}

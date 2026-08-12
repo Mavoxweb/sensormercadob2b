@@ -62,9 +62,9 @@ export const OperationalProblem: React.FC = () => {
     <section id="produto" className="py-16 sm:py-20 lg:py-32 bg-[#F4EDE2] border-t border-[#DFDFDD] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="O PROBLEMA"
-          title="Sua rede cresceu. O jeito de anunciar continuou o mesmo."
-          description="Quando cada campanha depende de pedido, aprovação e ajuste manual, a oferta demora, a rede perde o padrão e a operação fica presa."
+          eyebrow="O PROBLEMA OPERACIONAL"
+          title="Do pedido à campanha: por que a operação tradicional trava."
+          description="Fila de artes, mensagens de WhatsApp e dependência de terceiros custam tempo e faturamento para a sua rede."
         />
 
         {/* 4 Pain Points Cards Grid from Copy */}

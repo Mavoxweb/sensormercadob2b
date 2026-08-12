@@ -31,7 +31,7 @@ export const AgencyWhatIsIt: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-[#69433C] leading-relaxed max-w-2xl mx-auto font-medium">
-            É uma plataforma pronta pra sua agência criar encartes e materiais de oferta pra redes de varejo de alimento. Você monta a oferta num lugar só e ela vai pra todas as lojas do seu cliente, com a marca dele. Sem começar do zero e sem contratar programador.
+            É uma plataforma pronta pra sua agência criar encartes e materiais de oferta pra redes de varejo. Você monta a oferta num lugar só e ela vai pra todas as lojas do seu cliente, com a marca dele. Sem começar do zero e sem contratar programador.
           </p>
 
           <div className="pt-2">

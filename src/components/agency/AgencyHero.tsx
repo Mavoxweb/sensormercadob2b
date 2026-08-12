@@ -43,7 +43,7 @@ export const AgencyHero: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-base sm:text-xl text-[#69433C] font-normal leading-relaxed max-w-3xl">
-            Conheça a Senso Mercado, a plataforma que a sua agência usa pra criar e entregar encarte pra redes de varejo de alimento, sem montar time de design.
+            Conheça a Sensor Mercado, a plataforma que a sua agência usa pra criar e entregar encarte pra redes de varejo, sem montar time de design.
           </p>
 
           {/* CTAs */}

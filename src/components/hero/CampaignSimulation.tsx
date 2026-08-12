@@ -56,12 +56,12 @@ export const CAMPAIGN_PRODUCTS: ProductItem[] = [
   },
   {
     id: 'prod-4',
-    name: 'FEIJÃO 1KG',
-    unit: 'Pacote 1kg',
-    price: 'R$ 7,99',
-    originalPrice: 'R$ 10,90',
-    badge: 'OFERTA',
-    image: 'https://images.unsplash.com/photo-1551462147-ff29053bfc14?auto=format&fit=crop&w=400&q=80',
+    name: 'FRANGO',
+    unit: 'Bandeja 1kg',
+    price: 'R$ 12,90',
+    originalPrice: 'R$ 17,90',
+    badge: 'PROMOÇÃO',
+    image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=400&q=80',
     status: 'Validado',
   },
 ];

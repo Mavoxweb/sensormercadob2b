@@ -45,7 +45,7 @@ export const TargetAudience: React.FC = () => {
         <SectionHeading
           eyebrow="PRA QUEM É A SENSOR MERCADO"
           title="Pra quem é a Sensor Mercado"
-          description="Feita pra rede de varejo de alimento com 5 lojas ou mais."
+          description="Feita pra rede de varejo com 5 lojas ou mais."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-12">

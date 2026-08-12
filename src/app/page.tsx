@@ -8,6 +8,7 @@ import { MatrixUnits } from '@/components/sections/MatrixUnits';
 import { ProductWorkflow } from '@/components/sections/ProductWorkflow';
 import { MultiFormat } from '@/components/sections/MultiFormat';
 import { AppFeature } from '@/components/sections/AppFeature';
+import { PrintToDigital } from '@/components/sections/PrintToDigital';
 import { ScaleNetwork } from '@/components/sections/ScaleNetwork';
 import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { EnterpriseOffer } from '@/components/sections/EnterpriseOffer';
@@ -18,7 +19,7 @@ import { Footer } from '@/components/layout/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#090D0F] text-[#F4F7F5] selection:bg-[#20D477] selection:text-[#090D0F]">
+    <div className="min-h-screen bg-[#F9F7F3] text-[#2B2523] selection:bg-[#F59E0B] selection:text-[#2B2523]">
       <Navbar />
       <main>
         <Hero />
@@ -29,6 +30,7 @@ export default function Home() {
         <ProductWorkflow />
         <MultiFormat />
         <AppFeature />
+        <PrintToDigital />
         <ScaleNetwork />
         <BeforeAfter />
         <EnterpriseOffer />
