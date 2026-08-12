@@ -16,7 +16,7 @@ export const ScaleNetwork: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           eyebrow="CONSTRUÍDO PARA REDES"
-          title="Feito para funcionar quando 5 lojas viram 50."
+          title="Feito para funcionar quando 5 lojas viram mais de 10 lojas"
           description="Sua rede pode crescer dez vezes em número de unidades sem que a equipe de marketing da matriz precise aumentar o tamanho ou a carga de trabalho."
         />
 

@@ -24,11 +24,11 @@ export default function Home() {
       <main>
         <Hero />
         <TargetAudience />
+        <MultiFormat />
+        <ProductWorkflow />
+        <MatrixUnits />
         <OperationalProblem />
         <InteractiveDemo />
-        <MatrixUnits />
-        <ProductWorkflow />
-        <MultiFormat />
         <AppFeature />
         <PrintToDigital />
         <ScaleNetwork />
