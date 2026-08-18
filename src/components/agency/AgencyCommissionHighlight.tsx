@@ -8,10 +8,11 @@ import {
   CheckCircle2, 
   ArrowRight,
   Sparkles,
-  Calculator
+  Percent
 } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Button } from '../ui/Button';
+
 
 export const AgencyCommissionHighlight: React.FC = () => {
   const scrollToForm = () => {
@@ -28,7 +29,7 @@ export const AgencyCommissionHighlight: React.FC = () => {
         <SectionHeading
           eyebrow="SEJA PARCEIRO • OPORTUNIDADE DE RECEITA"
           title="Vire parceiro e ganhe em cada venda."
-          description="Leve a Senso Mercado pros seus clientes de varejo e ganhe 20% de comissão em cada venda que fechar. Você entrega uma solução nova pro cliente, reduz o seu custo de produção e ainda cria uma fonte de receita pra agência."
+          description="Leve o Sensor Mercado pros seus clientes de varejo e ganhe 20% de comissão recorrente em cada venda que fechar. Você entrega uma solução nova pro cliente, reduz o seu custo de produção e ainda cria uma nova fonte de receita pra agência."
         />
 
         {/* Main Highlight Card */}
@@ -39,25 +40,25 @@ export const AgencyCommissionHighlight: React.FC = () => {
             <div className="md:col-span-7 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F59E0B]/20 text-[#2B2523] text-xs font-black tracking-wider uppercase">
                 <Coins className="w-4 h-4 text-[#F59E0B]" />
-                20% DE COMISSÃO DIRETA
+                20% DE COMISSÃO RECORRENTE
               </div>
 
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#2B2523] leading-tight">
-                Nova fonte de receita sem aumentar a folha de pagamento da agência.
+                Nova fonte de receita recorrente sem aumentar a folha de pagamento.
               </h3>
 
               <div className="space-y-3 text-xs sm:text-sm text-[#69433C] font-medium">
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>Comissão garantida:</strong> 20% sobre cada implantação da plataforma e do app.</span>
+                  <span><strong>Comissão recorrente garantida:</strong> 20% sobre cada licença e renovação da plataforma e do app.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>Redução drástica de custos:</strong> Elimine horas de refação de peças gráficas repetitivas.</span>
+                  <span><strong>Redução drástica de custos:</strong> Elimine horas de refação de peças gráficas repetitivas da sua equipe.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5" />
-                  <span><strong>Retenção de clientes:</strong> Entregue uma tecnologia proprietária com a marca do supermercado.</span>
+                  <span><strong>Retenção de clientes:</strong> Entregue uma tecnologia proprietária com a marca da rede de varejo.</span>
                 </div>
               </div>
 
@@ -74,25 +75,27 @@ export const AgencyCommissionHighlight: React.FC = () => {
               </div>
             </div>
 
-            {/* Right: Revenue Simulation Example Box */}
+            {/* Right: Pure 20% Recurring Commission Highlight Card (No fixed prices) */}
             <div className="md:col-span-5 bg-[#F9F7F3] p-6 rounded-2xl border border-[#DFDFDD] space-y-4 text-center shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center mx-auto border border-[#F59E0B]/40">
-                <Calculator className="w-6 h-6" />
+              <div className="w-14 h-14 rounded-2xl bg-[#F59E0B]/20 text-[#F59E0B] flex items-center justify-center mx-auto border border-[#F59E0B]/40">
+                <Percent className="w-7 h-7" />
               </div>
 
               <div className="space-y-1">
-                <span className="text-[10px] font-black tracking-widest text-[#69433C] uppercase">EXEMPLO PRÁTICO</span>
-                <h4 className="text-lg font-extrabold text-[#2B2523]">Simulação de Ganhos</h4>
+                <span className="text-[10px] font-black tracking-widest text-[#69433C] uppercase">MODELO DE PARCERIA</span>
+                <h4 className="text-xl font-extrabold text-[#2B2523]">20% de Comissão Recorrente</h4>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#FFFFFF] border border-[#F59E0B]/50 space-y-2">
-                <div className="text-xs text-[#69433C]">Numa venda de <strong>R$ 20.000</strong>:</div>
-                <div className="text-3xl font-black text-[#F59E0B]">R$ 4.000</div>
-                <div className="text-[11px] font-bold text-[#2B2523] uppercase tracking-wider">Direto pra sua agência</div>
+              <div className="p-5 rounded-xl bg-[#FFFFFF] border border-[#F59E0B]/50 space-y-2">
+                <div className="text-4xl font-black text-[#F59E0B]">20%</div>
+                <div className="text-xs font-extrabold text-[#2B2523] uppercase tracking-wider">Recorrente Por Venda</div>
+                <p className="text-[11px] text-[#69433C] leading-relaxed font-medium pt-1">
+                  Em cada novo cliente de varejo fechado e mantido pela sua agência.
+                </p>
               </div>
 
               <p className="text-[11px] text-[#69433C] leading-relaxed font-medium">
-                Multiplique pela quantidade de redes de supermercado do seu portfólio.
+                Sua agência aumenta o faturamento a cada nova rede ativada no seu portfólio.
               </p>
             </div>
 

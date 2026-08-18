@@ -22,7 +22,7 @@ export const AgencyHowItWorks: React.FC = () => {
     {
       step: '03',
       title: 'Marca 100% do cliente',
-      description: 'Seu cliente continua seu. O material e o aplicativo saem exclusivamente com a marca do supermercado dele, nunca com a nossa.',
+      description: 'Seu cliente continua seu. O material e o aplicativo saem exclusivamente com a marca do varejista dele, nunca com a nossa.',
       badge: 'WHITE LABEL'
     }
   ];

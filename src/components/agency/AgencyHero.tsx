@@ -4,7 +4,6 @@ import React from 'react';
 import { ArrowRight, Sparkles, ShieldCheck, CheckCircle, ExternalLink, Briefcase } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
-import { HeroProductDemo } from '../sections/HeroProductDemo';
 
 export const AgencyHero: React.FC = () => {
   const scrollTo = (id: string) => {
@@ -16,7 +15,7 @@ export const AgencyHero: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-28 sm:pt-40 pb-16 lg:pb-28 overflow-hidden bg-[#F9F7F3]">
+    <section className="relative pt-28 sm:pt-40 pb-12 lg:pb-16 overflow-hidden bg-[#F9F7F3]">
       {/* Background Radial Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] hero-glow pointer-events-none opacity-80" />
       
@@ -35,7 +34,7 @@ export const AgencyHero: React.FC = () => {
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#2B2523] tracking-tight leading-[1.1] sm:leading-[1.08] break-words">
-            E se a sua agência criasse a arte do encarte com{' '}
+            Se a sua agência pudesse criar a arte do encarte com{' '}
             <span className="text-[#F59E0B] block mt-1 sm:mt-2">
               menos mão de obra, menos custo e muito mais rápido?
             </span>
@@ -43,7 +42,7 @@ export const AgencyHero: React.FC = () => {
 
           {/* Subtitle */}
           <p className="text-base sm:text-xl text-[#69433C] font-normal leading-relaxed max-w-3xl">
-            Conheça a Sensor Mercado, a plataforma que a sua agência usa pra criar e entregar encarte pra redes de varejo, sem montar time de design.
+            Conheça o Sensor Mercado, a plataforma que a sua agência usa pra criar e entregar encartes pra redes de varejo, sem montar time de design — e ainda ganhar <strong className="text-[#2B2523]">20% de comissão recorrente</strong> por venda.
           </p>
 
           {/* CTAs */}
@@ -95,10 +94,8 @@ export const AgencyHero: React.FC = () => {
             </span>
           </div>
         </div>
-
-        {/* Hero Interactive Product Showcase */}
-        <HeroProductDemo />
       </div>
     </section>
   );
 };
+

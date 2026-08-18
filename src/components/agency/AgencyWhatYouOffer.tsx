@@ -33,7 +33,7 @@ export const AgencyWhatYouOffer: React.FC = () => {
         <SectionHeading
           eyebrow="PORTFÓLIO DA AGÊNCIA"
           title="O que você passa a oferecer"
-          description="Transforme a operação da sua agência entregando velocidade, padronização e automação para os seus clientes do setor supermercadista."
+          description="Transforme a operação da sua agência entregando velocidade, padronização e automação para os seus clientes do setor varejista."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

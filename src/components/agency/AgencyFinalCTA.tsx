@@ -68,7 +68,7 @@ export const AgencyFinalCTA: React.FC = () => {
         </div>
 
         <p className="text-xs text-[#69433C] pt-4 font-semibold">
-          Sensor Mercado — A plataforma de encartes e apps para o seu cliente supermercadista.
+          Sensor Mercado — A plataforma de encartes e apps para o seu cliente varejista.
         </p>
       </div>
     </section>

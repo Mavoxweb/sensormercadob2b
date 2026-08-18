@@ -43,9 +43,9 @@ export const TargetAudience: React.FC = () => {
     <section className="py-16 sm:py-20 lg:py-24 bg-[#F9F7F3] border-t border-[#DFDFDD] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="PRA QUEM É A SENSOR MERCADO"
-          title="Pra quem é a Sensor Mercado"
-          description="Feita pra rede de varejo com 5 lojas ou mais."
+          eyebrow="PRA QUEM É O SENSOR MERCADO"
+          title="Pra quem é o Sensor Mercado"
+          description="Desenvolvido sob medida para operações que exigem agilidade na atualização de preços e controle de comunicação visual."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-12">

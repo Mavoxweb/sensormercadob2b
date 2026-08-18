@@ -43,7 +43,7 @@ export const AgencyAppExtension: React.FC = () => {
         <SectionHeading
           eyebrow="NOVO PRODUTO NO PORTFÓLIO DA AGÊNCIA"
           title="Leve também o app pro seu cliente."
-          description="Além do encarte, você pode entregar um app pro seu cliente supermercado. Nele, os clientes do supermercado veem os encartes e as ofertas promocionais direto no celular."
+          description="Além do encarte, você pode entregar um app pro seu cliente varejista. Nele, os clientes da rede veem os encartes e as ofertas promocionais direto no celular."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-12 items-center">
@@ -59,7 +59,7 @@ export const AgencyAppExtension: React.FC = () => {
             </h3>
 
             <p className="text-base sm:text-lg text-[#69433C] leading-relaxed font-medium">
-              Você entrega, o supermercado tem o próprio app, os clientes dele veem as ofertas e você ganha comissão.
+              Você entrega, o varejista tem o próprio app, os clientes dele veem as ofertas e você ganha comissão recorrente.
             </p>
 
             <div className="p-6 rounded-2xl bg-[#FFFFFF] border border-[#F59E0B]/40 space-y-4 shadow-sm">
@@ -88,7 +88,7 @@ export const AgencyAppExtension: React.FC = () => {
                 <div className="space-y-1">
                   <h4 className="text-base font-extrabold text-[#2B2523]">Gestão de Mídia B2B (Indústria)</h4>
                   <p className="text-xs text-[#69433C] leading-relaxed">
-                    Sua agência pode gerenciar o espaço publicitário no app do supermercado e vender banners para grandes marcas e fornecedores.
+                    Sua agência pode gerenciar o espaço publicitário no app do varejista e vender banners para grandes marcas e fornecedores.
                   </p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export const AgencyAppExtension: React.FC = () => {
                       SM
                     </div>
                     <div>
-                      <div className="text-xs font-black tracking-tight text-[#2B2523]">SUPERMERCADO DA REDE</div>
+                      <div className="text-xs font-black tracking-tight text-[#2B2523]">REDE DE VAREJO</div>
                       <div className="text-[9px] font-bold text-[#F59E0B] uppercase">App com a Marca do Cliente</div>
                     </div>
                   </div>

@@ -17,7 +17,7 @@ export const AgencyTargetAudience: React.FC = () => {
   const audienceTypes = [
     {
       icon: ShoppingCart,
-      title: 'Agência que cuida de supermercado',
+      title: 'Agência que cuida de redes de varejo',
       description: 'Redes de 5 ou mais lojas que demandam campanhas semanais de encarte.'
     },
     {
@@ -43,7 +43,7 @@ export const AgencyTargetAudience: React.FC = () => {
         <SectionHeading
           eyebrow="PERFIL DE PARCEIRO"
           title="Feita pra agência que atende varejo."
-          description="Se a sua agência atende empresas do varejo, a Sensor Mercado encaixa perfeitamente no seu portfólio de serviços."
+          description="Se a sua agência atende empresas do varejo, o Sensor Mercado encaixa perfeitamente no seu portfólio de serviços."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">

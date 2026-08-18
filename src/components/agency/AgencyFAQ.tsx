@@ -19,7 +19,7 @@ export const AGENCY_FAQ_ITEMS = [
   },
   {
     question: "De quem é a marca no material?",
-    answer: "Do seu cliente. O material sai com a marca do supermercado, nunca com a nossa."
+    answer: "Do seu cliente. O material sai com a marca do varejista, nunca com a nossa."
   },
   {
     question: "Preciso de programador?",
@@ -38,7 +38,7 @@ export const AgencyFAQ: React.FC = () => {
         <SectionHeading
           eyebrow="FAQ • PERGUNTAS FREQUENTES"
           title="Dúvidas frequentes sobre a parceria"
-          description="Tudo o que você precisa saber sobre a modelo de comissionamento e atuação conjunta com a Senso Mercado."
+          description="Tudo o que você precisa saber sobre o modelo de comissionamento e atuação conjunta com a Sensor Mercado."
         />
 
         <Accordion items={AGENCY_FAQ_ITEMS} className="mt-12" />

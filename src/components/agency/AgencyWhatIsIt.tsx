@@ -27,7 +27,7 @@ export const AgencyWhatIsIt: React.FC = () => {
           <span className="text-xs font-black tracking-widest text-[#F59E0B] uppercase">TECNOLOGIA PRONTA PARA AGÊNCIAS</span>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2B2523] tracking-tight">
-            O que é a Senso Mercado
+            O que é o Sensor Mercado
           </h2>
 
           <p className="text-base sm:text-lg text-[#69433C] leading-relaxed max-w-2xl mx-auto font-medium">
